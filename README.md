@@ -5,9 +5,8 @@ The engine will mostly be a main Game class that you can inherit from, then runn
 ```C++
 int main(int argc, char* argv[])
 {
-	game = new MyGame();
-	game.mainloop();
-	return 0;
+	game = MyGame();
+	return game.run();
 }
 
 ```

@@ -1,4 +1,8 @@
 # SDL2_GameEngine by lilitharcana
+   Feature   |    Status
+------------ | -------------
+Game class   | Working on it...
+
 ## I'm learning SDL2 and C++ by making a game engine!
 >This engine will attempt to be versatile, meaning you could make a fully featured barebones game in a couple lines of code, or you can use certain parts of the engine that you like!
 

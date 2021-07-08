@@ -3,7 +3,7 @@
 This engine will attempt to be versatile, meaning you could make a fully featured game in a couple lines of code, or you can use certain parts of the engine that you like!  
 Let's say I wanted to make a platformer game. I'll need graphics, audio, controls, maps, physics, different levels, menus, options... or I could put all of that into one simple to use PlatformerGame abstraction:
 ```C++
-game = PlatformerGame();
+game = PlatformerGame("my-game.gameconfig");	// gameconfig file can have anything to edit the default PlatformerGame class
 game.setPlayer("player.png");
 game.setBackground(bg.png);
 for(int level = 0; level <= 2; level++)
@@ -12,8 +12,20 @@ for(int level = 0; level <= 2; level++)
 }
 game.run();
 ```
+Or if I want more customization with the player or physics, I can subclass PlatformerGame and implement my own functionality into the game:
+```C++
+class MyPlatformerGame : public PlatformerGame
+{
+private:
+	void init()
+	{
+		
+	}
+}
+```
+Or I can construct a base game with no default functionality and write it all myself!
 
-## Features:
+## Features
 ### Asset Management
 The engine will have a simple system for creating game objects out of assets, with an internal resource manager:
 ```C++

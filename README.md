@@ -34,7 +34,7 @@ Or I can construct a base game with no default functionality and write it all my
 ## Features
 
 ### Game Class
-The engine will mostly be a main Game class that you can inherit from:
+The engine will mostly be a main ```Game``` class that you can inherit from:
 ```C++
 class MyGame: public Game
 {
@@ -56,7 +56,7 @@ int main(int argc, char* argv[])
 ```
 
 ### Asset Management
-The engine will have a simple system for creating game objects out of assets, with an internal resource manager:
+The engine will have a simple system for creating ```GameObject```s out of assets, with an internal ```Resource``` manager:
 ```C++
 // Create a Sprite game object (pos, size, rotation, color, blendmode, etc), with a Texture resource (internal, managed by Assets class)
 Sprite* player = Assets.createSprite("img/player.png");
@@ -81,7 +81,7 @@ Assets.free();
 ```
 
 ### Stages
-All of the game objects created can be added to Stages:
+All of the game objects created can be added to ```Stage```s:
 ```C++
 Stage world = Stage();	// Create a blank Stage
 world.setMap();		// Set the map to be used
@@ -94,7 +94,7 @@ game.setStage(world);
 ```
 
 ### Event Handling
-Lambda functions can be attached as an EventHandler to any game object, stage, or game! 
+Lambda functions can be attached as an ```EventHandler``` to any ```GameObject```, ```Stage```, or ```Game```! 
 ```C++
 player.addEvent<KeyboardEvent>(
     [&player] (KeyboardEvent event) {

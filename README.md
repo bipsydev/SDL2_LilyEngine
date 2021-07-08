@@ -12,10 +12,10 @@ game.run();
 ```
 Or if I want more customization with the player or physics, I can subclass PlatformerGame and implement my own functionality into the game:
 ```C++
-class MyPlatformerGame : public PlatformerGame
+class MyPlatformerGame: public PlatformerGame
 {
 public:
-	MyPlatformerGame() : PlatformerGame("my-game.gameconfig")
+	MyPlatformerGame(): PlatformerGame("my-game.gameconfig")
 	{
 		setPlayer("player.png");
 		setBackground("bg.png");
@@ -34,7 +34,7 @@ Or I can construct a base game with no default functionality and write it all my
 ### Game Class
 The engine will mostly be a main Game class that you can inherit from:
 ```C++
-class MyGame : public Game
+class MyGame: public Game
 {
 protected:
 	void init();	// Initialize your game objects/assets

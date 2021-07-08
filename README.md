@@ -54,8 +54,8 @@ int main(int argc, char* argv[])
     return game.run();
 }
 ```
-#### Virtual, Protected Methods
-```Game``` class and it's subclass templates (like ```PlatformerGame```) all contain many protected virtual methods that can be overridden. This way, the internal functionality can always be changed at specific points!
+##### Virtual, Protected Methods
+> ```Game``` class and it's subclass templates (like ```PlatformerGame```) all contain many protected virtual methods that can be overridden. This way, the internal functionality can always be changed at specific points!
 
 ### Asset Management
 The engine will have a simple system for creating ```GameObject```s out of assets, with an internal ```Resource``` manager:

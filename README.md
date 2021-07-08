@@ -1,5 +1,5 @@
 # SDL2_GameEngine
-Learning SDL2 and C++ by making a game engine!
+## Learning SDL2 and C++ by making a game engine!
 
 The engine will have a simple system for creating game objects out of assets, with an internal resource manager:
 ```C++
@@ -25,6 +25,7 @@ delete music;
 Assets.free();
 ```
 
+
 All of the game objects created can be added to Stages:
 ```C++
 Stage world = Stage();	// Create a blank Stage
@@ -33,6 +34,7 @@ world.add(player);	// Add a Sprite (actor)
 world.setMusic(music);	// Set the music (will play when stage becomes active)
 
 ```
+
 
 The engine will mostly be a main Game class that you can inherit from:
 ```C++
@@ -45,6 +47,7 @@ private:
 	void clean();
 }
 ```
+
 
 Then running the game is as simple as:
 ```C++

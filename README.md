@@ -16,12 +16,12 @@ Or if I want more customization with the player or physics, I can subclass Platf
 class MyPlatformerGame: public PlatformerGame
 {
 public:
-	MyPlatformerGame(): PlatformerGame("my-game.gameconfig")
-	{
-		setPlayer("player.png");
-		setBackground("bg.png");
-		addLevels("map0*.tmx");
-	}
+    MyPlatformerGame(): PlatformerGame("my-game.gameconfig")
+    {
+        setPlayer("player.png");
+	setBackground("bg.png");
+	addLevels("map0*.tmx");
+    }
 	
 protected:
 	// override protected methods from PlatformerGame or Game here to change internal functionality!
@@ -86,6 +86,8 @@ Stage world = Stage();	// Create a blank Stage
 world.setMap();		// Set the map to be used
 world.add(player);	// Add a Sprite (actor)
 world.setMusic(music);	// Set the music (will play when stage becomes active)
-
+```
+Stages can be set to automatically update, render, and catch events for all of its actors:
+```C++
 game.setStage(world);
 ```

@@ -1,6 +1,10 @@
 # SDL2_GameEngine
 ## Learning SDL2 and C++ by making a game engine!
+This engine will attempt to be versatile, meaning you could make a fully featured game in a couple lines of code or in thousands of lines.
+Let's say I wanted to make a platformer game. I'll need graphics, audio, controls, maps, physics, different levels, menus, options... or I could put all of that into one simple to use PlatformerGame abstraction:
+``` game = PlatformerGame(); ```
 
+### Asset Management
 The engine will have a simple system for creating game objects out of assets, with an internal resource manager:
 ```C++
 // Create a Sprite game object (pos, size, rotation, color, blendmode, etc), with a Texture resource (internal, managed by Assets class)
@@ -25,7 +29,7 @@ delete music;
 Assets.free();
 ```
 
-
+###
 All of the game objects created can be added to Stages:
 ```C++
 Stage world = Stage();	// Create a blank Stage

@@ -14,7 +14,17 @@ Or if I want more customization with the player or physics, I can subclass Platf
 ```C++
 class MyPlatformerGame : public PlatformerGame
 {
-	// override protected methods from PlatformerGame or Game here!
+public:
+	MyPlatformerGame() : PlatformerGame("my-game.gameconfig")
+	{
+		setPlayer("player.png");
+		setBackground("bg.png");
+		addLevels("map0*.tmx");
+	}
+	
+protected:
+	// override protected methods from PlatformerGame or Game here to change internal functionality!
+	
 }
 ```
 Or I can construct a base game with no default functionality and write it all myself by inheriting from ```Game```!
@@ -26,7 +36,7 @@ The engine will mostly be a main Game class that you can inherit from:
 ```C++
 class MyGame : public Game
 {
-private:
+protected:
 	void init();	// Initialize your game objects/assets
 	void event();	// React to user input or other events
 	void update();	// Update game logic/physics

@@ -1,5 +1,5 @@
 # SDL2_GameEngine by lilitharcana
-## Learning SDL2 and C++ by making a game engine!
+## I'm learning SDL2 and C++ by making a game engine!
 This engine will attempt to be versatile, meaning you could make a fully featured game in a couple lines of code, or you can use certain parts of the engine that you like!  
 Let's say I wanted to make a platformer game. I'll need graphics, audio, controls, maps, physics, different levels, menus, options... or I could put all of that into one simple to use PlatformerGame abstraction:
 ```C++
@@ -22,8 +22,8 @@ class MyPlatformerGame : public PlatformerGame
 ```
 Or I can construct a base game with no default functionality and write it all myself by inheriting from ```Game```!
 
-## Features  
-  
+## Features
+
 ### Game Class
 The engine will mostly be a main Game class that you can inherit from:
 ```C++
@@ -36,8 +36,6 @@ private:
 	void clean();
 }
 ```
-
-
 Then running the game is as simple as:
 ```C++
 int main(int argc, char* argv[])

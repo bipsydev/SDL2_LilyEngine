@@ -22,10 +22,9 @@ public:
 	setBackground("bg.png");
 	addLevels("map0*.tmx");
     }
-	
+
 protected:
-	// override protected methods from PlatformerGame or Game here to change internal functionality!
-	
+    // override protected methods from PlatformerGame or Game here to change internal functionality!
 }
 ```
 Or I can construct a base game with no default functionality and write it all myself by inheriting from ```Game```!
@@ -38,19 +37,19 @@ The engine will mostly be a main Game class that you can inherit from:
 class MyGame: public Game
 {
 protected:
-	void init();	// Initialize your game objects/assets
-	void event();	// React to user input or other events
-	void update();	// Update game logic/physics
-	void render();	// draw to the game framebuffer
-	void clean();	// optional, free up all assets
+    void init();	// Initialize your game objects/assets
+    void event();	// React to user input or other events
+    void update();	// Update game logic/physics
+    void render();	// draw to the game framebuffer
+    void clean();	// optional, free up all assets
 }
 ```
 Then running the game is as simple as:
 ```C++
 int main(int argc, char* argv[])
 {
-	game = MyGame();
-	return game.run();
+    game = MyGame();
+    return game.run();
 }
 ```
 
@@ -90,4 +89,12 @@ world.setMusic(music);	// Set the music (will play when stage becomes active)
 Stages can be set to automatically update, render, and catch events for all of its actors:
 ```C++
 game.setStage(world);
+```
+
+### Event Handling
+Lambda functions can be attached as an EventHandler to any game object, stage, or game! 
+```C++
+player.addEvent<KeyboardEvent>([&evenCount] (int n) {
+    cout << n;
+});
 ```

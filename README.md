@@ -5,7 +5,8 @@ The engine will have a simple system for creating game objects out of assets:
 ```C++
 Sprite* player = Assets.createSprite("img/player.png");
 Audio* music = Assets.createAudio("snd/bg-music.wav");
-...
+
+// Then to free assets:
 delete player;
 delete music;
 ```

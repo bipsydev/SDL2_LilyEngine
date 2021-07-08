@@ -4,11 +4,14 @@
 
 Let's say I wanted to make a platformer game. I'll need graphics, audio, controls, maps, physics, different levels, menus, options... or I could put all of that into one simple to use PlatformerGame class:
 ```C++
-PlatformerGame game = PlatformerGame("my-game.gameconfig");	// optional gameconfig file can have anything to edit the default PlatformerGame class
+PlatformerGame game = PlatformerGame("my-game.gameconfig");	// optional .gameconfig file can have anything to edit the default PlatformerGame class
+
 // Use PlatformerGame's public methods to set it up how you like!
 game.setPlayer("player.png");
 game.setBackground("bg.png");
 game.addLevels("map0*.tmx");	// adds all levels that match this! map00, map01, map02, etc
+
+// run and close the game!
 game.run();
 ```
 Or if I want more customization with the player or physics, I can subclass PlatformerGame and implement my own functionality into the game:
@@ -22,7 +25,6 @@ public:
 	setBackground("bg.png");
 	addLevels("map0*.tmx");
     }
-
 protected:
     // override protected methods from PlatformerGame or Game here to change internal functionality!
 }
@@ -94,7 +96,13 @@ game.setStage(world);
 ### Event Handling
 Lambda functions can be attached as an EventHandler to any game object, stage, or game! 
 ```C++
-player.addEvent<KeyboardEvent>([&evenCount] (int n) {
-    cout << n;
-});
+player.addEvent<KeyboardEvent>(
+    [&player] (KeyboardEvent event) {
+    	if(event.keycode == "K_SPACE")
+	{
+	    player.jump();
+	    player.addVelocity(-5.0f, 0f);
+	}
+    }
+);
 ```

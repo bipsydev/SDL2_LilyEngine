@@ -8,10 +8,6 @@ PlatformerGame game = PlatformerGame("my-game.gameconfig");	// optional gameconf
 game.setPlayer("player.png");
 game.setBackground("bg.png");
 game.addLevels("map0*.tmx");	// adds all levels that match this! map00, map01, map02, etc
-for(int level = 0; level <= 2; level++)
-{
-	game.addLevel(level, "map0"+level+".tmx");
-}
 game.run();
 ```
 Or if I want more customization with the player or physics, I can subclass PlatformerGame and implement my own functionality into the game:
@@ -31,10 +27,11 @@ The engine will mostly be a main Game class that you can inherit from:
 class MyGame : public Game
 {
 private:
-	void init();
-	void update();
-	void render();
-	void clean();
+	void init();	// Initialize your game objects/assets
+	void event();	// React to user input or other events
+	void update();	// Update game logic/physics
+	void render();	// draw to the game framebuffer
+	void clean();	// optional, free up all assets
 }
 ```
 Then running the game is as simple as:
@@ -79,4 +76,5 @@ world.setMap();		// Set the map to be used
 world.add(player);	// Add a Sprite (actor)
 world.setMusic(music);	// Set the music (will play when stage becomes active)
 
+game.setStage(world);
 ```

@@ -1,7 +1,7 @@
 # SDL2_GameTemplate by lilitharcana
 ### I'm learning SDL2 and C++ by making a game engine!
 #### I'm starting with a template game class, then I'll make other additional components as I need them.
-Check the docs: https://lilitharcana.github.io/SDL2_GameTemplate
+Check the [docs!](https://lilitharcana.github.io/SDL2_GameTemplate)
 
 --------------------------------------------------------
 # Overview

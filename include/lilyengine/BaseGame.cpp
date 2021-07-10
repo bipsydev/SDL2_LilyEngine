@@ -3,6 +3,7 @@
 #include "BaseGame.hpp"
 #include <iostream>
 
+
 BaseGame::BaseGame(const char* title, int width, int height, bool run_instantly)
 {
 	isRunning = false;

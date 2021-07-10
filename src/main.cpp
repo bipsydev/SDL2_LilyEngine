@@ -15,9 +15,17 @@ If you want SDL2_ttf, SDL2_image, etc, you must download the MinGW development l
 */
 #include "ExampleGame.hpp"
 
+/**
+ * @brief Main function, creates a game object, runs it, and then deletes it.
+ * 
+ * @param argv 
+ * @param args 
+ * @return int 
+ */
 int main(int argv, char** args)
 {
-	ExampleGame* game = new ExampleGame("Example!", 640, 480, true);
+	ExampleGame* game = new ExampleGame();
+	game->run();
 	delete game;
 	return 0;
 }

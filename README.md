@@ -3,7 +3,7 @@
 > *I'm learning SDL2 and C++ by making a game engine!*
 
 __`SDL2_LilyEngine`__ aims to be an educational high-level OOP wrapper framework for the SDL2 graphics library in C++!  
-Ideally, __`SDL2_LilyEngine`__ will be a library of components for easy SDL operations. A framework for creating a Game class out of these libraries can be used, or you can use the libraries individually. Additionally in the future, I plan to make a graphical interface to the engine that outputs C++ code!  
+At its core, __`SDL2_LilyEngine`__ will be a *library* of components for easy SDL operations. A *framework* for creating a Game class out of these libraries can be used, or you can use the libraries individually. Additionally in the future, I plan to make a *graphical interface* to the engine that outputs C++ code!  
 
 ----------------
 

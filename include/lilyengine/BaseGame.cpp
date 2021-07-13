@@ -1,10 +1,29 @@
-/*
-*/
+/**
+ * @file BaseGame.cpp
+ * @author lilitharcana (lilithalicecrawford@gmail.com)
+ * @brief Implementation for BaseGame class from BaseGame.hpp.
+ * @version 0.1
+ * @date 2021-07-09
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include "BaseGame.hpp"
 #include <iostream>
 
 
-BaseGame::BaseGame(const char* title, int width, int height, bool run_instantly)
+/**
+ * @brief Construct a BaseGame object, with a given title, window size, and autorun flag.
+ * Initializes SDL and its subsystems, creates SDL window and renderer, and sets up LilyEngine systems.
+ * If autorun is true, the game will automatically start and run inside the constructor.
+ * If you need an exit code for the game, call run() seperately.
+ * 
+ * @param title The title of the window.
+ * @param width width of the window.
+ * @param height height of the window.
+ * @param autorun Whether or not to automatically run the game.
+ */
+BaseGame::BaseGame(const char* title, int width, int height, bool autorun)
 {
 	isRunning = false;
 	frame = 0;
@@ -38,12 +57,16 @@ BaseGame::BaseGame(const char* title, int width, int height, bool run_instantly)
 	isRunning = true;
 	std::cout << "Game Initialized!" << std::endl;
 
-	if(run_instantly)
+	if(autorun)
 	{
 		run();
 	}
 }
 
+/**
+ * @brief The main game loop. Updates clock, checks for events, updates game logic, and renders the screen.
+ * Exits if isRunning is false.
+ */
 void BaseGame::run()
 {
 	std::cout << "Running game..." << std::endl;
@@ -75,10 +98,14 @@ void BaseGame::run()
 	}
 }
 
+/**
+ * @brief Frees your resources with cleanup(), destroys LilyEngine and SDL systems.
+ */
 BaseGame::~BaseGame()
 {
 	SDL_DestroyRenderer(renderer);
 	SDL_DestroyWindow(window);
 
+	TTF_Quit();
 	SDL_Quit();
 }

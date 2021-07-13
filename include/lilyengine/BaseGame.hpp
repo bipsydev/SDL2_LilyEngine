@@ -1,9 +1,16 @@
-/*	BaseGame.hpp	-	Heather Crawford	-	07-09-2021
-Abstract base class Game, sets up SDL systems & objects, 
-*/
+/**
+ * @file BaseGame.hpp
+ * @author lilitharcana (lilithalicecrawford@gmail.com)
+ * @brief Main abstract class to inherit for all games made with SDL_LilyEngine.
+ * @version 0.1
+ * @date 2021-07-09
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #pragma once
-#ifndef _SDL2LE_BASEGAME_HPP_
-#define _SDL2LE_BASEGAME_HPP_
+#ifndef _SDL2_LILYENGINE_BASEGAME_HPP_
+#define _SDL2_LILYENGINE_BASEGAME_HPP_
 
 #include <SDL.h>
 #include <SDL_image.h>
@@ -24,4 +31,4 @@ public:
 	virtual void run();
 };
 
-#endif /* _SDL2LE_BASEGAME_HPP_ */
+#endif /* _SDL2_LILYENGINE_BASEGAME_HPP_ */

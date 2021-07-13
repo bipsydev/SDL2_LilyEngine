@@ -1,19 +1,36 @@
-/*	ExampleGame.cpp	-	Heather Crawford	-	07-09-2021
-
-*/
+/**
+ * @file ExampleGame.cpp
+ * @author lilitharcana (lilithalicecrawford@gmail.com)
+ * @brief Implements the ExampleGame class.
+ * @version 0.1
+ * @date 2021-07-09
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include "ExampleGame.hpp"
 #include <iostream>
 
-ExampleGame::ExampleGame(const char* title, int width, int height, bool run_instantly)
-: BaseGame(title, width, height, run_instantly)
+/**
+ * @brief Construct a new Example Game object
+ * Sets window title, size, and autorun.
+ */
+ExampleGame::ExampleGame()
+: BaseGame("This is an Example Game!", 640, 480, false)
 {
 }
 
+/**
+ * @brief Calls BaseGame::run().
+ */
 void ExampleGame::run()
 {
 	BaseGame::run();
 }
 
+/**
+ * @brief Frees up ExampleGame resources from memory.
+ */
 ExampleGame::~ExampleGame()
 {
 }

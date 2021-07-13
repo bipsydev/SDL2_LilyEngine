@@ -26,12 +26,12 @@ var NAVTREE =
 [
   [ "SDL2_LilyEngine", "index.html", [
     [ "<tt>SDL2_LilyEngine</tt> by <em>lilitharcana</em>", "md_README.html", [
-      [ "Plan Overview", "md_README.html#autotoc_md2", [
-        [ "Planned Features", "md_README.html#autotoc_md3", [
-          [ "Game Class", "md_README.html#autotoc_md4", null ],
-          [ "Asset Management", "md_README.html#autotoc_md6", null ],
-          [ "Stages", "md_README.html#autotoc_md7", null ],
-          [ "Event Handling", "md_README.html#autotoc_md8", null ]
+      [ "Plan Overview", "md_README.html#autotoc_md3", [
+        [ "Planned Features", "md_README.html#autotoc_md4", [
+          [ "Game Class", "md_README.html#autotoc_md5", null ],
+          [ "Asset Management", "md_README.html#autotoc_md7", null ],
+          [ "Stages", "md_README.html#autotoc_md8", null ],
+          [ "Event Handling", "md_README.html#autotoc_md9", null ]
         ] ]
       ] ]
     ] ],

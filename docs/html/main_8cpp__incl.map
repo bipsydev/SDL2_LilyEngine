@@ -1,5 +1,5 @@
 <map id="src/main.cpp" name="src/main.cpp">
-<area shape="rect" id="node1" title="Main function to show how to run an example game created with LilyEngine::BaseGame...." alt="" coords="90,5,187,32"/>
+<area shape="rect" id="node1" title="Main function to show how to run an example game created with LilyEngine::BaseGame." alt="" coords="90,5,187,32"/>
 <area shape="rect" id="node2" href="$ExampleGame_8hpp.html" title="Example template game for the game engine." alt="" coords="72,80,205,107"/>
 <area shape="rect" id="node3" href="$SDL2__LilyEngine_8hpp.html" title="Shortcut header file to include all SDL2_LilyEngine files." alt="" coords="65,155,212,181"/>
 <area shape="rect" id="node4" href="$BaseGame_8hpp.html" title="Main abstract class to inherit for all games made with SDL_LilyEngine." alt="" coords="83,229,195,256"/>

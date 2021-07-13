@@ -2,7 +2,7 @@
  * @file main.cpp
  * @author lilitharcana (lilithalicecrawford@gmail.com)
  * @brief Main function to show how to run an example game created with LilyEngine::BaseGame.
- * follow this guide to set up VS Code with SDL2: https://giovanni.codes/setup-sdl2-with-visual-studio-code-and-mingw64-on-windows/
+ * @details follow this guide to set up VS Code with SDL2: https://giovanni.codes/setup-sdl2-with-visual-studio-code-and-mingw64-on-windows/
  * If you want SDL2_ttf, SDL2_image, etc, you must download the MinGW development libraries & also the x64/x86 runtime binaries to do the same:
  * 1.) in tasks.json, under "tasks"/"args", add the /include/SDL2 folder with -I:
  * 		"-IC:/Users/lilit/Dev/Libraries/SDL2-mingw/SDL2-2.0.14/x86_64/include/SDL2"

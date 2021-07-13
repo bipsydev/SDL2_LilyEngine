@@ -89,8 +89,11 @@ $(document).ready(function(){initNavTree('md_README.html',''); initResizable(); 
 <blockquote class="doxtable">
 <p><em>I'm learning SDL2 and C++ by making a game engine!</em> </p>
 </blockquote>
-<p>__<code>SDL2_LilyEngine</code>__ aims to be a high-level OOP wrapper framework for the SDL2 graphics library in C++! <br  />
- It will provide one main abstract <code>LilyEngine::BaseGame</code> class with 5 pure virtual methods: </p><div class="fragment"><div class="line"> {C++}</div>
+<p>__<code>SDL2_LilyEngine</code>__ aims to be an educational high-level OOP wrapper framework for the SDL2 graphics library in C++! <br  />
+ At its core, __<code>SDL2_LilyEngine</code>__ will be a <em>static library</em> of components for easy SDL operations. A <em>framework</em> for creating your own game class via inheritance can be used, or you can use the libraries individually. Additionally in the future, I plan to make a <em>graphical interface</em> to the engine that outputs C++ code! <br  />
+</p>
+<hr  />
+<p>It will provide one main abstract <code>LilyEngine::BaseGame</code> class with 5 pure virtual methods: </p><div class="fragment"><div class="line"> {C++}</div>
 <div class="line">namespace LilyEngine {</div>
 <div class="line">    class BaseGame {</div>
 <div class="line">    protected:</div>
@@ -152,7 +155,7 @@ $(document).ready(function(){initNavTree('md_README.html',''); initResizable(); 
 <div class="line">// and when the game is reopened and needs to reload:</div>
 <div class="line">stageManager.loadAll(&quot;saves/save1.gamestate&quot;);</div>
 </div><!-- fragment --><hr  />
- <h1><a class="anchor" id="autotoc_md2"></a>
+ <h1><a class="anchor" id="autotoc_md3"></a>
 Plan Overview</h1>
 <p>&gt;This engine will attempt to be versatile, meaning you could make a fully featured barebones game in a couple lines of code, or you can use certain parts of the engine that you like!</p>
 <p>Let's say I wanted to make a platformer game. I'll need graphics, audio, controls, maps, physics, different levels, menus, options... or I could put all of that into one simple to use PlatformerGame class: </p><div class="fragment"><div class="line"> {C++}</div>
@@ -179,9 +182,9 @@ Plan Overview</h1>
 <div class="line">    // override protected methods from PlatformerGame or Game here to change internal functionality!</div>
 <div class="line">}</div>
 </div><!-- fragment --><p> Or I can construct a base game with no default functionality and write it all myself by inheriting from <code>Game</code>!</p>
-<h2><a class="anchor" id="autotoc_md3"></a>
+<h2><a class="anchor" id="autotoc_md4"></a>
 Planned Features</h2>
-<h3><a class="anchor" id="autotoc_md4"></a>
+<h3><a class="anchor" id="autotoc_md5"></a>
 Game Class</h3>
 <p>The engine will mostly be a main <code>Game</code> class that you can inherit from: </p><div class="fragment"><div class="line"> {C++}</div>
 <div class="line">class MyGame: public Game</div>
@@ -199,11 +202,11 @@ Game Class</h3>
 <div class="line">    game = MyGame();</div>
 <div class="line">    return game.run();</div>
 <div class="line">}</div>
-</div><!-- fragment --><p> <a class="anchor" id="autotoc_md5"></a> </p><h5>Virtual, Protected Methods</h5>
+</div><!-- fragment --><p> <a class="anchor" id="autotoc_md6"></a> </p><h5>Virtual, Protected Methods</h5>
 <blockquote class="doxtable">
 <p><code>Game</code> class and it's subclass templates (like <code>PlatformerGame</code>) all contain many protected virtual methods that can be overridden. This way, the internal functionality can always be changed at specific points! </p>
 </blockquote>
-<h3><a class="anchor" id="autotoc_md6"></a>
+<h3><a class="anchor" id="autotoc_md7"></a>
 Asset Management</h3>
 <p>The engine will have a simple system for creating <code>GameObject</code>s out of assets, with an internal <code>Resource</code> manager: </p><div class="fragment"><div class="line"> {C++}</div>
 <div class="line">// Create a Sprite game object (pos, size, rotation, color, blendmode, etc), with a Texture resource (internal, managed by Assets class)</div>
@@ -226,7 +229,7 @@ Asset Management</h3>
 <div class="line"> </div>
 <div class="line">// To free up all assets at the end of the game:</div>
 <div class="line">Assets.free();</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md7"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md8"></a>
 Stages</h3>
 <p>All of the game objects created can be added to <code>Stage</code>s: </p><div class="fragment"><div class="line"> {C++}</div>
 <div class="line">Stage world = Stage();  // Create a blank Stage</div>
@@ -235,7 +238,7 @@ Stages</h3>
 <div class="line">world.setMusic(music);  // Set the music (will play when stage becomes active)</div>
 </div><!-- fragment --><p> Stages can be set to automatically update, render, and catch events for all of its actors: </p><div class="fragment"><div class="line"> {C++}</div>
 <div class="line">game.setStage(world);</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md8"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md9"></a>
 Event Handling</h3>
 <p>Lambda functions can be attached as an <code>EventHandler</code> to any <code>GameObject</code>, <code>Stage</code>, or <code>Game</code>! </p><div class="fragment"><div class="line"> {C++}</div>
 <div class="line">player.addEvent&lt;KeyboardEvent&gt;(</div>
@@ -253,7 +256,7 @@ Event Handling</h3>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Jul 13 2021 18:49:09 for SDL2_LilyEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Tue Jul 13 2021 18:55:48 for SDL2_LilyEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

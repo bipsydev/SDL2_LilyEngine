@@ -1,10 +1,83 @@
-# SDL2_GameTemplate by lilitharcana
-### I'm learning SDL2 and C++ by making a game engine!
-#### I'm starting with a template game class, then I'll make other additional components as I need them.
-Check the [docs!](https://lilitharcana.github.io/SDL2_GameTemplate)
+# `SDL2_LilyEngine` by _lilitharcana_
+###### *Check the* [docs!](https://lilitharcana.github.io/SDL2_LilyEngine)
+> *I'm learning SDL2 and C++ by making a game engine!*
+
+__`SDL2_LilyEngine`__ aims to be a high-level OOP wrapper framework for the SDL2 graphics library in C++!  
+It will provide one main abstract `LilyEngine::BaseGame` class with 5 pure virtual methods:
+```C++
+namespace LilyEngine {
+	class BaseGame {
+	protected:
+		// initialize game objects, global variables, set inputs, load resources, configure systems...
+		virtual void init(string title) = 0;
+
+		// Main game loop, runs every frame:
+		virtual bool event(SDL_Event* event) = 0;	// react to an event passed to the game, and return true if the event was caught
+		virtual void update() = 0;			// update game variables based in events/input/etc
+		virtual void render() = 0;			// render graphics output for the frame
+
+		// save the game if needed, unload textures, quit systems
+		virtual void cleanup() = 0;
+	};
+}
+```
+This way, you can inherit from `BaseGame` and make your own `MyWackyGame` class overriding the virtual methods, and then run the game in your main method:
+```C++
+int main(int argv, char** args) {
+	MyWackyGame* game = new MyWackyGame();
+	int exit_val = game->run();
+	delete game;
+	return exit_val;
+}
+```
+Or for even better shorthand:
+```C++
+int main(int argv, char** args) {
+	return MyWackyGame::factoryRun();
+}
+```
+There will also be protected class member subsystems you can use modularly inside your game subclass:
+```C++
+namespace LilyEngine {
+	class BaseGame {
+	protected:
+		LilyEngine:Clock clock;			// holds game time, frame number, delta time, can cap fps or enable vsync
+		LilyEngine:StageManager stageManager;	// manages your Stages, sets the active stage and updates it with all its actors
+		LilyEngine:Graphics graphics;		// graphics loading/rendering module, creates sprites, fonts, and shape drawing
+		LilyEngine:Audio audio;			// audio module for loading/playing sounds
+		LilyEngine:Input input;			// input module for querying controls
+	};
+}
+```
+The *stage* and *actor* system is used to create game actors and add them to a stage. The `LilyEngine::Actor` abstract class can be inherited to create your own game object classes. The `LilyEngine::Stage` class can be filled with Actors, subsequently saved or loaded, and hold cameras and room information. The `LilyEngine::StageManager` controls the current stage, keeps loaded stages running, and can script stages/scenes together and run/save them!
+```C++
+class MyPlayerActor: public LilyEngine::SpriteActor {
+	MyPlayerActor(): LilyEngine::SpriteActor("images/player.png") {
+	}
+	
+	void enterStage() override {
+		setPosition(LilyEngine::POS_WINDOW_CENTER);
+	}
+	void update() override {
+		speed.x += getGame().clock.delta;
+	}
+}
+
+// ... then, at some point during inside your game's init() or update():
+Stage level1 = stageManager.loadfromMap("maps/level1.tmx");
+level1.enterWithFocus(MyPlayerActor());
+stageManager.setActive(level1);
+// now the stage will automatically be updating during event(), update(), and render()!
+
+// ... when the game is closed/exited:
+stageManager.saveAll("saves/save1.gamestate");
+// and when the game is reopened and needs to reload:
+stageManager.loadAll("saves/save1.gamestate");
+
+```
 
 --------------------------------------------------------
-# Overview
+# Plan Overview
 >This engine will attempt to be versatile, meaning you could make a fully featured barebones game in a couple lines of code, or you can use certain parts of the engine that you like!
 
 Let's say I wanted to make a platformer game. I'll need graphics, audio, controls, maps, physics, different levels, menus, options... or I could put all of that into one simple to use PlatformerGame class:

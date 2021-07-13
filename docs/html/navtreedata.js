@@ -25,16 +25,13 @@
 var NAVTREE =
 [
   [ "SDL2_LilyEngine", "index.html", [
-    [ "SDL2_GameTemplate by lilitharcana", "md_README.html", [
-      [ "Overview", "md_README.html#autotoc_md4", [
-        [ "I'm learning SDL2 and C++ by making a game engine!", "md_README.html#autotoc_md1", [
-          [ "I'm starting with a template game class, then I'll make other additional components as I need them.", "md_README.html#autotoc_md2", null ]
-        ] ],
-        [ "Planned Features", "md_README.html#autotoc_md5", [
-          [ "Game Class", "md_README.html#autotoc_md6", null ],
-          [ "Asset Management", "md_README.html#autotoc_md8", null ],
-          [ "Stages", "md_README.html#autotoc_md9", null ],
-          [ "Event Handling", "md_README.html#autotoc_md10", null ]
+    [ "<tt>SDL2_LilyEngine</tt> by <em>lilitharcana</em>", "md_README.html", [
+      [ "Plan Overview", "md_README.html#autotoc_md2", [
+        [ "Planned Features", "md_README.html#autotoc_md3", [
+          [ "Game Class", "md_README.html#autotoc_md4", null ],
+          [ "Asset Management", "md_README.html#autotoc_md6", null ],
+          [ "Stages", "md_README.html#autotoc_md7", null ],
+          [ "Event Handling", "md_README.html#autotoc_md8", null ]
         ] ]
       ] ]
     ] ],

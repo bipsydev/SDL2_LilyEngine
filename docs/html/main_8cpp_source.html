@@ -85,41 +85,28 @@ $(document).ready(function(){initNavTree('main_8cpp_source.html',''); initResiza
 <div class="title">main.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="main_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*  SDL2 Project Template (main.cpp)    -   Heather Crawford    -   07-09-2021</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">follow this guide to set up VS Code with SDL2: https://giovanni.codes/setup-sdl2-with-visual-studio-code-and-mingw64-on-windows/</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">If you want SDL2_ttf, SDL2_image, etc, you must download the MinGW development libraries &amp; also the x64/x86 runtime binaries to do the same:</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">1.) in tasks.json, under &quot;tasks&quot;/&quot;args&quot;, add the ~/include/SDL2 folder with -I:</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">    &quot;-IC:/Users/lilit/Dev/Libraries/SDL2-mingw/SDL2-2.0.14/x86_64/include/SDL2&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">2.) also under &quot;tasks&quot;/&quot;args&quot;, add the ~/lib folder with -L:</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    &quot;-LC:/Users/lilit/Dev/Libraries/SDL2-mingw/SDL2-2.0.14/x86_64/lib&quot;,</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">3.) again under &quot;args&quot;, add the .lib files to the linker with -l:</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    &quot;-lSDL2main&quot;, &quot;-lSDL2&quot;, &quot;-lSDL2_ttf&quot;, &quot;-lSDL2_image&quot;, etc...</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">4.) in c_cpp_properties.json, under &quot;configurations&quot;/&quot;includePath&quot;, add your ~\\include\\SDL2 folders to update IntelliSense:</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    &quot;C:\\Users\\lilit\\Dev\\Libraries\\SDL2-mingw\\SDL2-2.0.14\\x86_64\\include\\SDL2&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">5.) in your build folder, copy all the runtime .dll binaries:</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    SDL2.dll, SDL2_ttf.dll, zlib1.dll, libfreetype-6.dll, SDL2_image.dll, libpng16-16.dll, libjpeg-9.dll, libtiff-5.dll, libwebp-7.dll, etc...</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ExampleGame_8hpp.html">ExampleGame.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="main_8cpp.html#a76d7886ff34652714e4a2d447ae4c5b6">   25</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#a76d7886ff34652714e4a2d447ae4c5b6">main</a>(<span class="keywordtype">int</span> argv, <span class="keywordtype">char</span>** args)</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="classExampleGame.html">ExampleGame</a>* game = <span class="keyword">new</span> <a class="code" href="classExampleGame.html">ExampleGame</a>();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    game-&gt;<a class="code" href="classExampleGame.html#a49a0d9e6dc57dc9da4431cc60a508785">run</a>();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">delete</span> game;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
-<div class="ttc" id="aExampleGame_8hpp_html"><div class="ttname"><a href="ExampleGame_8hpp.html">ExampleGame.hpp</a></div></div>
-<div class="ttc" id="aclassExampleGame_html"><div class="ttname"><a href="classExampleGame.html">ExampleGame</a></div><div class="ttdef"><b>Definition:</b> <a href="ExampleGame_8hpp_source.html#l00010">ExampleGame.hpp:11</a></div></div>
-<div class="ttc" id="aclassExampleGame_html_a49a0d9e6dc57dc9da4431cc60a508785"><div class="ttname"><a href="classExampleGame.html#a49a0d9e6dc57dc9da4431cc60a508785">ExampleGame::run</a></div><div class="ttdeci">void run() override</div><div class="ttdef"><b>Definition:</b> <a href="ExampleGame_8cpp_source.html#l00012">ExampleGame.cpp:12</a></div></div>
-<div class="ttc" id="amain_8cpp_html_a76d7886ff34652714e4a2d447ae4c5b6"><div class="ttname"><a href="main_8cpp.html#a76d7886ff34652714e4a2d447ae4c5b6">main</a></div><div class="ttdeci">int main(int argv, char **args)</div><div class="ttdoc">Main function, creates a game object, runs it, and then deletes it.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00025">main.cpp:25</a></div></div>
+<a href="main_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ExampleGame_8hpp.html">ExampleGame.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="main_8cpp.html#a76d7886ff34652714e4a2d447ae4c5b6">   33</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#a76d7886ff34652714e4a2d447ae4c5b6">main</a>(<span class="keywordtype">int</span> argv, <span class="keywordtype">char</span>** args)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classExampleGame.html">ExampleGame</a>* game = <span class="keyword">new</span> <a class="code" href="classExampleGame.html">ExampleGame</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    game-&gt;<a class="code" href="classExampleGame.html#a49a0d9e6dc57dc9da4431cc60a508785">run</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">delete</span> game;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="ttc" id="aExampleGame_8hpp_html"><div class="ttname"><a href="ExampleGame_8hpp.html">ExampleGame.hpp</a></div><div class="ttdoc">Example template game for the game engine.</div></div>
+<div class="ttc" id="aclassExampleGame_html"><div class="ttname"><a href="classExampleGame.html">ExampleGame</a></div><div class="ttdef"><b>Definition:</b> <a href="ExampleGame_8hpp_source.html#l00017">ExampleGame.hpp:18</a></div></div>
+<div class="ttc" id="aclassExampleGame_html_a49a0d9e6dc57dc9da4431cc60a508785"><div class="ttname"><a href="classExampleGame.html#a49a0d9e6dc57dc9da4431cc60a508785">ExampleGame::run</a></div><div class="ttdeci">void run() override</div><div class="ttdoc">Calls BaseGame::run().</div><div class="ttdef"><b>Definition:</b> <a href="ExampleGame_8cpp_source.html#l00026">ExampleGame.cpp:26</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a76d7886ff34652714e4a2d447ae4c5b6"><div class="ttname"><a href="main_8cpp.html#a76d7886ff34652714e4a2d447ae4c5b6">main</a></div><div class="ttdeci">int main(int argv, char **args)</div><div class="ttdoc">Main function, creates a game object, runs it, and then deletes it.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00033">main.cpp:33</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="main_8cpp.html">main.cpp</a></li>
-    <li class="footer">Generated on Sat Jul 10 2021 04:22:23 for SDL2_LilyEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Tue Jul 13 2021 18:49:09 for SDL2_LilyEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

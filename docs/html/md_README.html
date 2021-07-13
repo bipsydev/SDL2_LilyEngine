@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SDL2_LilyEngine: SDL2_GameTemplate by lilitharcana</title>
+<title>SDL2_LilyEngine: &lt;tt&gt;SDL2_LilyEngine&lt;/tt&gt; by &lt;em&gt;lilitharcana&lt;/em&gt;</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -82,16 +82,78 @@ $(document).ready(function(){initNavTree('md_README.html',''); initResizable(); 
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">SDL2_GameTemplate by lilitharcana </div>  </div>
+<div class="title"><code>SDL2_LilyEngine</code> by <em>lilitharcana</em> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2><a class="anchor" id="autotoc_md1"></a>
-I'm learning SDL2 and C++ by making a game engine!</h2>
-<h3><a class="anchor" id="autotoc_md2"></a>
-I'm starting with a template game class, then I'll make other additional components as I need them.</h3>
-<hr  />
- <h1><a class="anchor" id="autotoc_md4"></a>
-Overview</h1>
+<div class="textblock"><h5><em>Check the</em> <a href="https://lilitharcana.github.io/SDL2_LilyEngine">docs!</a></h5>
+<blockquote class="doxtable">
+<p><em>I'm learning SDL2 and C++ by making a game engine!</em> </p>
+</blockquote>
+<p>__<code>SDL2_LilyEngine</code>__ aims to be a high-level OOP wrapper framework for the SDL2 graphics library in C++! <br  />
+ It will provide one main abstract <code>LilyEngine::BaseGame</code> class with 5 pure virtual methods: </p><div class="fragment"><div class="line"> {C++}</div>
+<div class="line">namespace LilyEngine {</div>
+<div class="line">    class BaseGame {</div>
+<div class="line">    protected:</div>
+<div class="line">        // initialize game objects, global variables, set inputs, load resources, configure systems...</div>
+<div class="line">        virtual void init(string title) = 0;</div>
+<div class="line"> </div>
+<div class="line">        // Main game loop, runs every frame:</div>
+<div class="line">        virtual bool event(SDL_Event* event) = 0;   // react to an event passed to the game, and return true if the event was caught</div>
+<div class="line">        virtual void update() = 0;          // update game variables based in events/input/etc</div>
+<div class="line">        virtual void render() = 0;          // render graphics output for the frame</div>
+<div class="line"> </div>
+<div class="line">        // save the game if needed, unload textures, quit systems</div>
+<div class="line">        virtual void cleanup() = 0;</div>
+<div class="line">    };</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> This way, you can inherit from <code><a class="el" href="classBaseGame.html">BaseGame</a></code> and make your own <code>MyWackyGame</code> class overriding the virtual methods, and then run the game in your main method: </p><div class="fragment"><div class="line"> {C++}</div>
+<div class="line">int main(int argv, char** args) {</div>
+<div class="line">    MyWackyGame* game = new MyWackyGame();</div>
+<div class="line">    int exit_val = game-&gt;run();</div>
+<div class="line">    delete game;</div>
+<div class="line">    return exit_val;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> Or for even better shorthand: </p><div class="fragment"><div class="line"> {C++}</div>
+<div class="line">int main(int argv, char** args) {</div>
+<div class="line">    return MyWackyGame::factoryRun();</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> There will also be protected class member subsystems you can use modularly inside your game subclass: </p><div class="fragment"><div class="line"> {C++}</div>
+<div class="line">namespace LilyEngine {</div>
+<div class="line">    class BaseGame {</div>
+<div class="line">    protected:</div>
+<div class="line">        LilyEngine:Clock clock;         // holds game time, frame number, delta time, can cap fps or enable vsync</div>
+<div class="line">        LilyEngine:StageManager stageManager;   // manages your Stages, sets the active stage and updates it with all its actors</div>
+<div class="line">        LilyEngine:Graphics graphics;       // graphics loading/rendering module, creates sprites, fonts, and shape drawing</div>
+<div class="line">        LilyEngine:Audio audio;         // audio module for loading/playing sounds</div>
+<div class="line">        LilyEngine:Input input;         // input module for querying controls</div>
+<div class="line">    };</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> The <em>stage</em> and <em>actor</em> system is used to create game actors and add them to a stage. The <code>LilyEngine::Actor</code> abstract class can be inherited to create your own game object classes. The <code>LilyEngine::Stage</code> class can be filled with Actors, subsequently saved or loaded, and hold cameras and room information. The <code>LilyEngine::StageManager</code> controls the current stage, keeps loaded stages running, and can script stages/scenes together and run/save them! </p><div class="fragment"><div class="line"> {C++}</div>
+<div class="line">class MyPlayerActor: public LilyEngine::SpriteActor {</div>
+<div class="line">    MyPlayerActor(): LilyEngine::SpriteActor(&quot;images/player.png&quot;) {</div>
+<div class="line">    }</div>
+<div class="line">    </div>
+<div class="line">    void enterStage() override {</div>
+<div class="line">        setPosition(LilyEngine::POS_WINDOW_CENTER);</div>
+<div class="line">    }</div>
+<div class="line">    void update() override {</div>
+<div class="line">        speed.x += getGame().clock.delta;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">// ... then, at some point during inside your game&#39;s init() or update():</div>
+<div class="line">Stage level1 = stageManager.loadfromMap(&quot;maps/level1.tmx&quot;);</div>
+<div class="line">level1.enterWithFocus(MyPlayerActor());</div>
+<div class="line">stageManager.setActive(level1);</div>
+<div class="line">// now the stage will automatically be updating during event(), update(), and render()!</div>
+<div class="line"> </div>
+<div class="line">// ... when the game is closed/exited:</div>
+<div class="line">stageManager.saveAll(&quot;saves/save1.gamestate&quot;);</div>
+<div class="line">// and when the game is reopened and needs to reload:</div>
+<div class="line">stageManager.loadAll(&quot;saves/save1.gamestate&quot;);</div>
+</div><!-- fragment --><hr  />
+ <h1><a class="anchor" id="autotoc_md2"></a>
+Plan Overview</h1>
 <p>&gt;This engine will attempt to be versatile, meaning you could make a fully featured barebones game in a couple lines of code, or you can use certain parts of the engine that you like!</p>
 <p>Let's say I wanted to make a platformer game. I'll need graphics, audio, controls, maps, physics, different levels, menus, options... or I could put all of that into one simple to use PlatformerGame class: </p><div class="fragment"><div class="line"> {C++}</div>
 <div class="line">PlatformerGame game = PlatformerGame(&quot;my-game.gameconfig&quot;); // optional .gameconfig file can have anything to edit the default PlatformerGame class</div>
@@ -117,9 +179,9 @@ Overview</h1>
 <div class="line">    // override protected methods from PlatformerGame or Game here to change internal functionality!</div>
 <div class="line">}</div>
 </div><!-- fragment --><p> Or I can construct a base game with no default functionality and write it all myself by inheriting from <code>Game</code>!</p>
-<h2><a class="anchor" id="autotoc_md5"></a>
+<h2><a class="anchor" id="autotoc_md3"></a>
 Planned Features</h2>
-<h3><a class="anchor" id="autotoc_md6"></a>
+<h3><a class="anchor" id="autotoc_md4"></a>
 Game Class</h3>
 <p>The engine will mostly be a main <code>Game</code> class that you can inherit from: </p><div class="fragment"><div class="line"> {C++}</div>
 <div class="line">class MyGame: public Game</div>
@@ -137,11 +199,11 @@ Game Class</h3>
 <div class="line">    game = MyGame();</div>
 <div class="line">    return game.run();</div>
 <div class="line">}</div>
-</div><!-- fragment --><p> <a class="anchor" id="autotoc_md7"></a> </p><h5>Virtual, Protected Methods</h5>
+</div><!-- fragment --><p> <a class="anchor" id="autotoc_md5"></a> </p><h5>Virtual, Protected Methods</h5>
 <blockquote class="doxtable">
 <p><code>Game</code> class and it's subclass templates (like <code>PlatformerGame</code>) all contain many protected virtual methods that can be overridden. This way, the internal functionality can always be changed at specific points! </p>
 </blockquote>
-<h3><a class="anchor" id="autotoc_md8"></a>
+<h3><a class="anchor" id="autotoc_md6"></a>
 Asset Management</h3>
 <p>The engine will have a simple system for creating <code>GameObject</code>s out of assets, with an internal <code>Resource</code> manager: </p><div class="fragment"><div class="line"> {C++}</div>
 <div class="line">// Create a Sprite game object (pos, size, rotation, color, blendmode, etc), with a Texture resource (internal, managed by Assets class)</div>
@@ -164,7 +226,7 @@ Asset Management</h3>
 <div class="line"> </div>
 <div class="line">// To free up all assets at the end of the game:</div>
 <div class="line">Assets.free();</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md9"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md7"></a>
 Stages</h3>
 <p>All of the game objects created can be added to <code>Stage</code>s: </p><div class="fragment"><div class="line"> {C++}</div>
 <div class="line">Stage world = Stage();  // Create a blank Stage</div>
@@ -173,7 +235,7 @@ Stages</h3>
 <div class="line">world.setMusic(music);  // Set the music (will play when stage becomes active)</div>
 </div><!-- fragment --><p> Stages can be set to automatically update, render, and catch events for all of its actors: </p><div class="fragment"><div class="line"> {C++}</div>
 <div class="line">game.setStage(world);</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md10"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md8"></a>
 Event Handling</h3>
 <p>Lambda functions can be attached as an <code>EventHandler</code> to any <code>GameObject</code>, <code>Stage</code>, or <code>Game</code>! </p><div class="fragment"><div class="line"> {C++}</div>
 <div class="line">player.addEvent&lt;KeyboardEvent&gt;(</div>
@@ -191,7 +253,7 @@ Event Handling</h3>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Jul 10 2021 04:22:23 for SDL2_LilyEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Tue Jul 13 2021 18:49:09 for SDL2_LilyEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

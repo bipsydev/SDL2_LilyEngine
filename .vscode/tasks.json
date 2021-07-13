@@ -8,7 +8,6 @@
 			"args": [
 				"-g",
 				"src\\*.cpp",
-				"include\\lilyengine\\*.cpp",
 				"-lm",
 				"-o",
 				"build\\game.exe",

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['_5fsdl2le_5fbasegame_5fhpp_5f_0',['_SDL2LE_BASEGAME_HPP_',['../BaseGame_8hpp.html#a06a0169a16c88c74692388d3cafdf806',1,'BaseGame.hpp']]],
-  ['_5fsdl2le_5fexamplegame_5fhpp_5f_1',['_SDL2LE_EXAMPLEGAME_HPP_',['../ExampleGame_8hpp.html#a359f8c6c20a0f48c13fe01a3d2d3fa91',1,'ExampleGame.hpp']]]
+  ['_3ctt_3esdl2_5flilyengine_3c_2ftt_3e_20by_20_3cem_3elilitharcana_3c_2fem_3e_0',['&lt;tt&gt;SDL2_LilyEngine&lt;/tt&gt; by &lt;em&gt;lilitharcana&lt;/em&gt;',['../md_README.html',1,'']]]
 ];

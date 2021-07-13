@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SDL2_LilyEngine: include/lilyengine/BaseGame.hpp File Reference</title>
+<title>SDL2_LilyEngine: include/BaseGame.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -88,30 +88,34 @@ $(document).ready(function(){initNavTree('BaseGame_8hpp.html',''); initResizable
 <div class="title">BaseGame.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Main abstract class to inherit for all games made with SDL_LilyEngine.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;SDL.h&gt;</code><br />
 <code>#include &lt;SDL_image.h&gt;</code><br />
 <code>#include &lt;SDL_ttf.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for BaseGame.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="BaseGame_8hpp__incl.png" border="0" usemap="#ainclude_2lilyengine_2BaseGame_8hpp" alt=""/></div>
-<map name="ainclude_2lilyengine_2BaseGame_8hpp" id="ainclude_2lilyengine_2BaseGame_8hpp">
-<area shape="rect" title=" " alt="" coords="78,5,199,47"/>
-<area shape="rect" title=" " alt="" coords="5,95,64,121"/>
-<area shape="rect" title=" " alt="" coords="89,95,189,121"/>
-<area shape="rect" title=" " alt="" coords="213,95,289,121"/>
+<div class="center"><img src="BaseGame_8hpp__incl.png" border="0" usemap="#ainclude_2BaseGame_8hpp" alt=""/></div>
+<map name="ainclude_2BaseGame_8hpp" id="ainclude_2BaseGame_8hpp">
+<area shape="rect" title="Main abstract class to inherit for all games made with SDL_LilyEngine." alt="" coords="60,5,217,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,64,107"/>
+<area shape="rect" title=" " alt="" coords="89,80,189,107"/>
+<area shape="rect" title=" " alt="" coords="213,80,289,107"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="BaseGame_8hpp__dep__incl.png" border="0" usemap="#ainclude_2lilyengine_2BaseGame_8hppdep" alt=""/></div>
-<map name="ainclude_2lilyengine_2BaseGame_8hppdep" id="ainclude_2lilyengine_2BaseGame_8hppdep">
-<area shape="rect" title=" " alt="" coords="87,5,208,47"/>
-<area shape="rect" href="BaseGame_8cpp.html" title=" " alt="" coords="5,95,127,136"/>
-<area shape="rect" href="ExampleGame_8hpp.html" title=" " alt="" coords="151,102,306,129"/>
-<area shape="rect" href="ExampleGame_8cpp.html" title=" " alt="" coords="75,184,230,211"/>
-<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="255,184,352,211"/>
+<div class="center"><img src="BaseGame_8hpp__dep__incl.png" border="0" usemap="#ainclude_2BaseGame_8hppdep" alt=""/></div>
+<map name="ainclude_2BaseGame_8hppdep" id="ainclude_2BaseGame_8hppdep">
+<area shape="rect" title="Main abstract class to inherit for all games made with SDL_LilyEngine." alt="" coords="172,5,329,32"/>
+<area shape="rect" href="SDL2__LilyEngine_8hpp.html" title="Shortcut header file to include all SDL2_LilyEngine files." alt="" coords="62,80,253,107"/>
+<area shape="rect" href="BaseGame_8cpp.html" title="Implementation for BaseGame class from BaseGame.hpp." alt="" coords="277,80,411,107"/>
+<area shape="rect" href="ExampleGame_8hpp.html" title="Example template game for the game engine." alt="" coords="68,155,247,181"/>
+<area shape="rect" href="ExampleGame_8cpp.html" title="Implements the ExampleGame class." alt="" coords="5,229,160,256"/>
+<area shape="rect" href="main_8cpp.html" title="Main function to show how to run an example game created with LilyEngine::BaseGame...." alt="" coords="185,229,282,256"/>
 </map>
 </div>
 </div>
@@ -124,23 +128,31 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a06a0169a16c88c74692388d3cafdf806"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BaseGame_8hpp.html#a06a0169a16c88c74692388d3cafdf806">_SDL2LE_BASEGAME_HPP_</a></td></tr>
-<tr class="separator:a06a0169a16c88c74692388d3cafdf806"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7046bb56ae2fbc25b9adaad2ab2d38e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BaseGame_8hpp.html#ad7046bb56ae2fbc25b9adaad2ab2d38e">_SDL2_LILYENGINE_BASEGAME_HPP_</a></td></tr>
+<tr class="separator:ad7046bb56ae2fbc25b9adaad2ab2d38e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a06a0169a16c88c74692388d3cafdf806"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06a0169a16c88c74692388d3cafdf806">&#9670;&nbsp;</a></span>_SDL2LE_BASEGAME_HPP_</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Main abstract class to inherit for all games made with SDL_LilyEngine. </p>
+<dl class="section author"><dt>Author</dt><dd>lilitharcana (<a href="#" onclick="location.href='mai'+'lto:'+'lil'+'it'+'hal'+'ic'+'ecr'+'aw'+'for'+'d@'+'gma'+'il'+'.co'+'m'; return false;">lilit<span style="display: none;">.nosp@m.</span>hali<span style="display: none;">.nosp@m.</span>cecra<span style="display: none;">.nosp@m.</span>wfor<span style="display: none;">.nosp@m.</span>d@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a>) </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2021-07-09</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2021 </dd></dl>
+
+<p class="definition">Definition in file <a class="el" href="BaseGame_8hpp_source.html">BaseGame.hpp</a>.</p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ad7046bb56ae2fbc25b9adaad2ab2d38e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7046bb56ae2fbc25b9adaad2ab2d38e">&#9670;&nbsp;</a></span>_SDL2_LILYENGINE_BASEGAME_HPP_</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define _SDL2LE_BASEGAME_HPP_</td>
+          <td class="memname">#define _SDL2_LILYENGINE_BASEGAME_HPP_</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BaseGame_8hpp_source.html#l00006">6</a> of file <a class="el" href="BaseGame_8hpp_source.html">BaseGame.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BaseGame_8hpp_source.html#l00013">13</a> of file <a class="el" href="BaseGame_8hpp_source.html">BaseGame.hpp</a>.</p>
 
 </div>
 </div>
@@ -149,8 +161,8 @@ Macros</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_b3a1f7d8bf3c4d7ceb0294f326094a50.html">lilyengine</a></li><li class="navelem"><a class="el" href="BaseGame_8hpp.html">BaseGame.hpp</a></li>
-    <li class="footer">Generated on Sat Jul 10 2021 04:22:23 for SDL2_LilyEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="BaseGame_8hpp.html">BaseGame.hpp</a></li>
+    <li class="footer">Generated on Tue Jul 13 2021 18:49:09 for SDL2_LilyEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

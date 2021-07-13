@@ -111,24 +111,29 @@ Collaboration diagram for ExampleGame:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:acf13ed0e3ca441716aa3ed1662d70524"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExampleGame.html#acf13ed0e3ca441716aa3ed1662d70524">ExampleGame</a> (const char *title=&quot;ExampleGame&quot;, int width=640, int height=480, bool run_instantly=false)</td></tr>
-<tr class="separator:acf13ed0e3ca441716aa3ed1662d70524"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38f26de67f2485cd03b5e48b6b98609f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExampleGame.html#a38f26de67f2485cd03b5e48b6b98609f">ExampleGame</a> ()</td></tr>
+<tr class="memdesc:a38f26de67f2485cd03b5e48b6b98609f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Example Game object Sets window title, size, and autorun.  <a href="classExampleGame.html#a38f26de67f2485cd03b5e48b6b98609f">More...</a><br /></td></tr>
+<tr class="separator:a38f26de67f2485cd03b5e48b6b98609f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaae94a06bd591b35cf083552f3fd0961"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExampleGame.html#aaae94a06bd591b35cf083552f3fd0961">~ExampleGame</a> ()</td></tr>
+<tr class="memdesc:aaae94a06bd591b35cf083552f3fd0961"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees up <a class="el" href="classExampleGame.html">ExampleGame</a> resources from memory.  <a href="classExampleGame.html#aaae94a06bd591b35cf083552f3fd0961">More...</a><br /></td></tr>
 <tr class="separator:aaae94a06bd591b35cf083552f3fd0961"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49a0d9e6dc57dc9da4431cc60a508785"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExampleGame.html#a49a0d9e6dc57dc9da4431cc60a508785">run</a> () override</td></tr>
+<tr class="memdesc:a49a0d9e6dc57dc9da4431cc60a508785"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls <a class="el" href="classBaseGame.html#a8cca19edcb875b30e47cca2a255b0916" title="The main game loop. Updates clock, checks for events, updates game logic, and renders the screen....">BaseGame::run()</a>.  <a href="classExampleGame.html#a49a0d9e6dc57dc9da4431cc60a508785">More...</a><br /></td></tr>
 <tr class="separator:a49a0d9e6dc57dc9da4431cc60a508785"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classBaseGame"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classBaseGame')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classBaseGame.html">BaseGame</a></td></tr>
 <tr class="memitem:a903869deac2898ced5bead697f2973d8 inherit pub_methods_classBaseGame"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseGame.html#a903869deac2898ced5bead697f2973d8">BaseGame</a> (const char *title=&quot;ExampleGame&quot;, int width=640, int height=480, bool run_instantly=false)</td></tr>
+<tr class="memdesc:a903869deac2898ced5bead697f2973d8 inherit pub_methods_classBaseGame"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classBaseGame.html">BaseGame</a> object, with a given title, window size, and autorun flag. Initializes SDL and its subsystems, creates SDL window and renderer, and sets up LilyEngine systems. If autorun is true, the game will automatically start and run inside the constructor. If you need an exit code for the game, call <a class="el" href="classBaseGame.html#a8cca19edcb875b30e47cca2a255b0916" title="The main game loop. Updates clock, checks for events, updates game logic, and renders the screen....">run()</a> seperately.  <a href="classBaseGame.html#a903869deac2898ced5bead697f2973d8">More...</a><br /></td></tr>
 <tr class="separator:a903869deac2898ced5bead697f2973d8 inherit pub_methods_classBaseGame"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18240692c5beab2d87b26513bb94b76a inherit pub_methods_classBaseGame"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseGame.html#a18240692c5beab2d87b26513bb94b76a">~BaseGame</a> ()=0</td></tr>
+<tr class="memdesc:a18240692c5beab2d87b26513bb94b76a inherit pub_methods_classBaseGame"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees your resources with cleanup(), destroys LilyEngine and SDL systems.  <a href="classBaseGame.html#a18240692c5beab2d87b26513bb94b76a">More...</a><br /></td></tr>
 <tr class="separator:a18240692c5beab2d87b26513bb94b76a inherit pub_methods_classBaseGame"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ExampleGame_8hpp_source.html#l00010">10</a> of file <a class="el" href="ExampleGame_8hpp_source.html">ExampleGame.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ExampleGame_8hpp_source.html#l00017">17</a> of file <a class="el" href="ExampleGame_8hpp_source.html">ExampleGame.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="acf13ed0e3ca441716aa3ed1662d70524"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf13ed0e3ca441716aa3ed1662d70524">&#9670;&nbsp;</a></span>ExampleGame()</h2>
+<a id="a38f26de67f2485cd03b5e48b6b98609f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38f26de67f2485cd03b5e48b6b98609f">&#9670;&nbsp;</a></span>ExampleGame()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -136,40 +141,19 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">ExampleGame::ExampleGame </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>title</em> = <code>&quot;ExampleGame&quot;</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>width</em> = <code>640</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>height</em> = <code>480</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>run_instantly</em> = <code>false</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExampleGame_8cpp_source.html#l00007">7</a> of file <a class="el" href="ExampleGame_8cpp_source.html">ExampleGame.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;: <a class="code" href="classBaseGame.html#a903869deac2898ced5bead697f2973d8">BaseGame</a>(title, width, height, run_instantly)</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
-<div class="ttc" id="aclassBaseGame_html_a903869deac2898ced5bead697f2973d8"><div class="ttname"><a href="classBaseGame.html#a903869deac2898ced5bead697f2973d8">BaseGame::BaseGame</a></div><div class="ttdeci">BaseGame(const char *title=&quot;ExampleGame&quot;, int width=640, int height=480, bool run_instantly=false)</div><div class="ttdef"><b>Definition:</b> <a href="BaseGame_8cpp_source.html#l00007">BaseGame.cpp:7</a></div></div>
+<p>Construct a new Example Game object Sets window title, size, and autorun. </p>
+
+<p class="definition">Definition at line <a class="el" href="ExampleGame_8cpp_source.html#l00018">18</a> of file <a class="el" href="ExampleGame_8cpp_source.html">ExampleGame.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;: <a class="code" href="classBaseGame.html#a903869deac2898ced5bead697f2973d8">BaseGame</a>(<span class="stringliteral">&quot;This is an Example Game!&quot;</span>, 640, 480, <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="ttc" id="aclassBaseGame_html_a903869deac2898ced5bead697f2973d8"><div class="ttname"><a href="classBaseGame.html#a903869deac2898ced5bead697f2973d8">BaseGame::BaseGame</a></div><div class="ttdeci">BaseGame(const char *title=&quot;ExampleGame&quot;, int width=640, int height=480, bool run_instantly=false)</div><div class="ttdoc">Construct a BaseGame object, with a given title, window size, and autorun flag. Initializes SDL and i...</div><div class="ttdef"><b>Definition:</b> <a href="BaseGame_8cpp_source.html#l00026">BaseGame.cpp:26</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -188,9 +172,11 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExampleGame_8cpp_source.html#l00017">17</a> of file <a class="el" href="ExampleGame_8cpp_source.html">ExampleGame.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<p>Frees up <a class="el" href="classExampleGame.html">ExampleGame</a> resources from memory. </p>
+
+<p class="definition">Definition at line <a class="el" href="ExampleGame_8cpp_source.html#l00034">34</a> of file <a class="el" href="ExampleGame_8cpp_source.html">ExampleGame.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -218,24 +204,26 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Calls <a class="el" href="classBaseGame.html#a8cca19edcb875b30e47cca2a255b0916" title="The main game loop. Updates clock, checks for events, updates game logic, and renders the screen....">BaseGame::run()</a>. </p>
+
 <p>Reimplemented from <a class="el" href="classBaseGame.html#a8cca19edcb875b30e47cca2a255b0916">BaseGame</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ExampleGame_8cpp_source.html#l00012">12</a> of file <a class="el" href="ExampleGame_8cpp_source.html">ExampleGame.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="classBaseGame.html#a8cca19edcb875b30e47cca2a255b0916">BaseGame::run</a>();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
-<div class="ttc" id="aclassBaseGame_html_a8cca19edcb875b30e47cca2a255b0916"><div class="ttname"><a href="classBaseGame.html#a8cca19edcb875b30e47cca2a255b0916">BaseGame::run</a></div><div class="ttdeci">virtual void run()</div><div class="ttdef"><b>Definition:</b> <a href="BaseGame_8cpp_source.html#l00047">BaseGame.cpp:47</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ExampleGame_8cpp_source.html#l00026">26</a> of file <a class="el" href="ExampleGame_8cpp_source.html">ExampleGame.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classBaseGame.html#a8cca19edcb875b30e47cca2a255b0916">BaseGame::run</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+<div class="ttc" id="aclassBaseGame_html_a8cca19edcb875b30e47cca2a255b0916"><div class="ttname"><a href="classBaseGame.html#a8cca19edcb875b30e47cca2a255b0916">BaseGame::run</a></div><div class="ttdeci">virtual void run()</div><div class="ttdoc">The main game loop. Updates clock, checks for events, updates game logic, and renders the screen....</div><div class="ttdef"><b>Definition:</b> <a href="BaseGame_8cpp_source.html#l00070">BaseGame.cpp:70</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="BaseGame_8cpp_source.html#l00047">BaseGame::run()</a>.</p>
+<p class="reference">References <a class="el" href="BaseGame_8cpp_source.html#l00070">BaseGame::run()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00025">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00033">main()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classExampleGame_a49a0d9e6dc57dc9da4431cc60a508785_cgraph.png" border="0" usemap="#aclassExampleGame_a49a0d9e6dc57dc9da4431cc60a508785_cgraph" alt=""/></div>
 <map name="aclassExampleGame_a49a0d9e6dc57dc9da4431cc60a508785_cgraph" id="aclassExampleGame_a49a0d9e6dc57dc9da4431cc60a508785_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,140,32"/>
-<area shape="rect" href="classBaseGame.html#a8cca19edcb875b30e47cca2a255b0916" title=" " alt="" coords="188,5,301,32"/>
+<area shape="rect" title="Calls BaseGame::run()." alt="" coords="5,5,140,32"/>
+<area shape="rect" href="classBaseGame.html#a8cca19edcb875b30e47cca2a255b0916" title="The main game loop. Updates clock, checks for events, updates game logic, and renders the screen...." alt="" coords="188,5,301,32"/>
 </map>
 </div>
 <div class="dynheader">
@@ -243,7 +231,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classExampleGame_a49a0d9e6dc57dc9da4431cc60a508785_icgraph.png" border="0" usemap="#aclassExampleGame_a49a0d9e6dc57dc9da4431cc60a508785_icgraph" alt=""/></div>
 <map name="aclassExampleGame_a49a0d9e6dc57dc9da4431cc60a508785_icgraph" id="aclassExampleGame_a49a0d9e6dc57dc9da4431cc60a508785_icgraph">
-<area shape="rect" title=" " alt="" coords="104,5,239,32"/>
+<area shape="rect" title="Calls BaseGame::run()." alt="" coords="104,5,239,32"/>
 <area shape="rect" href="main_8cpp.html#a76d7886ff34652714e4a2d447ae4c5b6" title="Main function, creates a game object, runs it, and then deletes it." alt="" coords="5,5,56,32"/>
 </map>
 </div>
@@ -251,7 +239,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>src/<a class="el" href="ExampleGame_8hpp_source.html">ExampleGame.hpp</a></li>
+<li>include/<a class="el" href="ExampleGame_8hpp_source.html">ExampleGame.hpp</a></li>
 <li>src/<a class="el" href="ExampleGame_8cpp_source.html">ExampleGame.cpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -260,7 +248,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classExampleGame.html">ExampleGame</a></li>
-    <li class="footer">Generated on Sat Jul 10 2021 04:22:23 for SDL2_LilyEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Tue Jul 13 2021 18:49:09 for SDL2_LilyEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

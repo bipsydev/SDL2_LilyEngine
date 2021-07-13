@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['sdl2_5fgametemplate_20by_20lilitharcana_15',['SDL2_GameTemplate by lilitharcana',['../md_README.html',1,'']]]
+  ['readme_2emd_14',['README.md',['../README_8md.html',1,'']]],
+  ['renderer_15',['renderer',['../classBaseGame.html#ae600a65b5b2848b3becb308ec8c0e56f',1,'BaseGame']]],
+  ['run_16',['run',['../classBaseGame.html#a8cca19edcb875b30e47cca2a255b0916',1,'BaseGame::run()'],['../classExampleGame.html#a49a0d9e6dc57dc9da4431cc60a508785',1,'ExampleGame::run()']]]
 ];

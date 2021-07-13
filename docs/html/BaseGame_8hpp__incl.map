@@ -1,6 +1,6 @@
-<map id="include/lilyengine/BaseGame.hpp" name="include/lilyengine/BaseGame.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="78,5,199,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,95,64,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="89,95,189,121"/>
-<area shape="rect" id="node4" title=" " alt="" coords="213,95,289,121"/>
+<map id="include/BaseGame.hpp" name="include/BaseGame.hpp">
+<area shape="rect" id="node1" title="Main abstract class to inherit for all games made with SDL_LilyEngine." alt="" coords="60,5,217,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,64,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="89,80,189,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="213,80,289,107"/>
 </map>

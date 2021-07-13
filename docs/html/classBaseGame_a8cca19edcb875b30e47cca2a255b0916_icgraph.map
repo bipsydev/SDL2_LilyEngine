@@ -1,6 +1,6 @@
 <map id="BaseGame::run" name="BaseGame::run">
-<area shape="rect" id="node1" title=" " alt="" coords="312,31,425,57"/>
-<area shape="rect" id="node2" href="$classBaseGame.html#a903869deac2898ced5bead697f2973d8" title=" " alt="" coords="104,5,264,32"/>
-<area shape="rect" id="node3" href="$classExampleGame.html#a49a0d9e6dc57dc9da4431cc60a508785" title=" " alt="" coords="117,56,251,83"/>
+<area shape="rect" id="node1" title="The main game loop. Updates clock, checks for events, updates game logic, and renders the screen...." alt="" coords="312,31,425,57"/>
+<area shape="rect" id="node2" href="$classBaseGame.html#a903869deac2898ced5bead697f2973d8" title="Construct a BaseGame object, with a given title, window size, and autorun flag. Initializes SDL and i..." alt="" coords="104,5,264,32"/>
+<area shape="rect" id="node3" href="$classExampleGame.html#a49a0d9e6dc57dc9da4431cc60a508785" title="Calls BaseGame::run()." alt="" coords="117,56,251,83"/>
 <area shape="rect" id="node4" href="$main_8cpp.html#a76d7886ff34652714e4a2d447ae4c5b6" title="Main function, creates a game object, runs it, and then deletes it." alt="" coords="5,56,56,83"/>
 </map>

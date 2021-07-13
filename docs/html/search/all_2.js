@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['examplegame_5',['ExampleGame',['../classExampleGame.html',1,'ExampleGame'],['../classExampleGame.html#acf13ed0e3ca441716aa3ed1662d70524',1,'ExampleGame::ExampleGame()']]],
-  ['examplegame_2ecpp_6',['ExampleGame.cpp',['../ExampleGame_8cpp.html',1,'']]],
-  ['examplegame_2ehpp_7',['ExampleGame.hpp',['../ExampleGame_8hpp.html',1,'']]]
+  ['basegame_4',['BaseGame',['../classBaseGame.html',1,'BaseGame'],['../classBaseGame.html#a903869deac2898ced5bead697f2973d8',1,'BaseGame::BaseGame()']]],
+  ['basegame_2ecpp_5',['BaseGame.cpp',['../BaseGame_8cpp.html',1,'']]],
+  ['basegame_2ehpp_6',['BaseGame.hpp',['../BaseGame_8hpp.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 <map id="ExampleGame::run" name="ExampleGame::run">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,140,32"/>
-<area shape="rect" id="node2" href="$classBaseGame.html#a8cca19edcb875b30e47cca2a255b0916" title=" " alt="" coords="188,5,301,32"/>
+<area shape="rect" id="node1" title="Calls BaseGame::run()." alt="" coords="5,5,140,32"/>
+<area shape="rect" id="node2" href="$classBaseGame.html#a8cca19edcb875b30e47cca2a255b0916" title="The main game loop. Updates clock, checks for events, updates game logic, and renders the screen...." alt="" coords="188,5,301,32"/>
 </map>

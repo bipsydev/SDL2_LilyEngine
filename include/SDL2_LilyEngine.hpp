@@ -9,9 +9,9 @@
  * 
  */
 #pragma once
-#ifndef __SDL2_LILYENGINE__
-#define __SDL2_LILYENGINE__
+#ifndef _SDL2_LILYENGINE_
+#define _SDL2_LILYENGINE_
 
-#include "lilyengine/BaseGame.hpp"
+#include "BaseGame.hpp"
 
-#endif // __SDL2_LILYENGINE__
+#endif // _SDL2_LILYENGINE_

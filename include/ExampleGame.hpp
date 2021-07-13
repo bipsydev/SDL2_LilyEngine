@@ -9,8 +9,8 @@
  * 
  */
 #pragma once
-#ifndef _SDL2LE_EXAMPLEGAME_HPP_
-#define _SDL2LE_EXAMPLEGAME_HPP_
+#ifndef _SDL2_LILYENGINE_EXAMPLEGAME_HPP_
+#define _SDL2_LILYENGINE_EXAMPLEGAME_HPP_
 
 #include <SDL2_LilyEngine.hpp>
 
@@ -24,4 +24,4 @@ public:
 	void run() override;
 };
 
-#endif /* _SDL2LE_EXAMPLEGAME_HPP_ */
+#endif /* _SDL2_LILYENGINE_EXAMPLEGAME_HPP_ */

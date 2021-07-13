@@ -2,7 +2,11 @@
 ###### *Check the* [docs!](https://lilitharcana.github.io/SDL2_LilyEngine)
 > *I'm learning SDL2 and C++ by making a game engine!*
 
-__`SDL2_LilyEngine`__ aims to be a high-level OOP wrapper framework for the SDL2 graphics library in C++!  
+__`SDL2_LilyEngine`__ aims to be an educational high-level OOP wrapper framework for the SDL2 graphics library in C++!  
+At its core, __`SDL2_LilyEngine`__ will be a *static library* of components for easy SDL operations. A *framework* for creating your own game class via inheritance can be used, or you can use the libraries individually. Additionally in the future, I plan to make a *graphical interface* to the engine that outputs C++ code!  
+
+----------------
+
 It will provide one main abstract `LilyEngine::BaseGame` class with 5 pure virtual methods:
 ```C++
 namespace LilyEngine {

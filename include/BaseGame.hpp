@@ -16,19 +16,22 @@
 #include <SDL_image.h>
 #include <SDL_ttf.h>
 
-class BaseGame
-{
-private:
-	SDL_Window* window;
-	SDL_Renderer* renderer;
-	bool isRunning;
-	int frame;
+namespace LilyEngine {
 
-public:
-	BaseGame(const char* title = "ExampleGame", int width = 640, int height = 480, bool run_instantly = false);
-	virtual ~BaseGame() = 0;
+	class BaseGame
+	{
+	private:
+		SDL_Window* window;
+		SDL_Renderer* renderer;
+		bool isRunning;
+		int frame;
 
-	virtual void run();
-};
+	public:
+		BaseGame(const char* title = "ExampleGame", int width = 640, int height = 480, bool run_instantly = false);
+		virtual ~BaseGame() = 0;
+
+		virtual void run();
+	};
+}
 
 #endif /* _SDL2_LILYENGINE_BASEGAME_HPP_ */

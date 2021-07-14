@@ -14,7 +14,7 @@
 
 #include <SDL2_LilyEngine.hpp>
 
-class ExampleGame: public BaseGame
+class ExampleGame: public LilyEngine::BaseGame
 {
 private:
 public:

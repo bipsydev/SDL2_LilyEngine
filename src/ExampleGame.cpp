@@ -15,8 +15,8 @@
  * @brief Construct a new Example Game object
  * Sets window title, size, and autorun.
  */
-ExampleGame::ExampleGame()
-: BaseGame("This is an Example Game!", 640, 480, false)
+ExampleGame::ExampleGame(std::string title)
+: BaseGame(title.c_str(), 640, 480, false)
 {
 }
 
@@ -26,6 +26,28 @@ ExampleGame::ExampleGame()
 void ExampleGame::run()
 {
 	BaseGame::run();
+}
+
+
+
+void ExampleGame::init() {
+
+}
+
+bool ExampleGame::event(SDL_Event& event) {
+	return false;
+}
+
+void ExampleGame::update() {
+
+}
+
+void ExampleGame::render() {
+
+}
+
+void ExampleGame::cleanup() {
+
 }
 
 /**

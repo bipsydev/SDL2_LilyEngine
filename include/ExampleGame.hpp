@@ -18,10 +18,17 @@ class ExampleGame: public LilyEngine::BaseGame
 {
 private:
 public:
-	ExampleGame();
+	ExampleGame(std::string title = "This is an Example Game!");
 	~ExampleGame();
 
 	void run() override;
+
+	void init() override;
+	bool event(SDL_Event& event) override;
+	void update() override;
+	void render() override;
+	void cleanup() override;
+
 };
 
 #endif /* _SDL2_LILYENGINE_EXAMPLEGAME_HPP_ */

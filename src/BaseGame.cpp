@@ -26,9 +26,6 @@ namespace LilyEngine {
 	 */
 	BaseGame::BaseGame(const char* title, int width, int height, bool autorun)
 	{
-		isRunning = false;
-		frame = 0;
-
 		bool sdl_initialized = SDL_Init(SDL_INIT_EVERYTHING);
 		if(sdl_initialized != 0)
 		{
@@ -55,13 +52,10 @@ namespace LilyEngine {
 			return;
 		}
 
-		isRunning = true;
+		clock.running = true;	// Start the game clock, needed to run the game.
 		std::cout << "Game Initialized!" << std::endl;
 
-		if(autorun)
-		{
-			run();
-		}
+		if(autorun) run();
 	}
 
 	/**
@@ -73,29 +67,29 @@ namespace LilyEngine {
 		std::cout << "Running game..." << std::endl;
 		SDL_Event event;
 
-		while (isRunning)
+		while (clock.running)
 		{
-			frame++;
 			while (SDL_PollEvent(&event))
 			{
 				switch (event.type)
 				{
 				case SDL_QUIT:
-					isRunning = false;
+					clock.running = false;
 					break;
 
 				case SDL_KEYDOWN:
 					if (event.key.keysym.sym == SDLK_ESCAPE)
 					{
-						isRunning = false;
+						clock.running = false;
 					}
 				}
 			}
 
-			SDL_SetRenderDrawColor(renderer, frame, frame, frame, 255);
+			SDL_SetRenderDrawColor(renderer, clock.ticks, clock.ticks, clock.ticks, SDL_ALPHA_OPAQUE);
 			SDL_RenderClear(renderer);
 
 			SDL_RenderPresent(renderer);
+			clock.tick();
 		}
 	}
 
@@ -110,4 +104,43 @@ namespace LilyEngine {
 		TTF_Quit();
 		SDL_Quit();
 	}
+	
+
+	/* 
+	 * ---------------------------------------
+	 * Private Methods - Engine implementation
+	 * ---------------------------------------
+	 */ 
+
+
+	bool BaseGame::init_sdl_systems(const char* title, int xpos, int ypos, int width, int height, bool fullscreen, Uint32 sdl_init_flags)
+	{
+		return true;
+	}
+	
+	bool BaseGame::load_engine_resources() 
+	{
+		return true;
+	}
+	
+	bool BaseGame::engine_handle_events() 
+	{
+		return false;
+	}
+	
+	void BaseGame::engine_update() 
+	{
+		
+	}
+	
+	void BaseGame::engine_render() 
+	{
+		
+	}
+	
+	void BaseGame::engine_clean() 
+	{
+		
+	}
+
 }

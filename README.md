@@ -45,11 +45,11 @@ There will also be protected class member subsystems you can use modularly insid
 namespace LilyEngine {
 	class BaseGame {
 	protected:
-		LilyEngine:Clock clock;			// holds game time, frame number, delta time, can cap fps or enable vsync
-		LilyEngine:StageManager stageManager;	// manages your Stages, sets the active stage and updates it with all its actors
-		LilyEngine:Graphics graphics;		// graphics loading/rendering module, creates sprites, fonts, and shape drawing
-		LilyEngine:Audio audio;			// audio module for loading/playing sounds
-		LilyEngine:Input input;			// input module for querying controls
+		LilyEngine::Clock clock;		// holds game time, frame number, delta time, can cap fps or enable vsync
+		LilyEngine::StageManager stageManager;	// manages your Stages, sets the active stage and updates it with all its actors
+		LilyEngine::Graphics graphics;		// graphics loading/rendering module, creates sprites, fonts, and shape drawing
+		LilyEngine::Audio audio;		// audio module for loading/playing sounds
+		LilyEngine::Input input;		// input module for querying controls
 	};
 }
 ```

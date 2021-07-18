@@ -16,7 +16,7 @@ namespace LilyEngine {
 		virtual void init(string title) = 0;
 
 		// Main game loop, runs every frame:
-		virtual bool event(SDL_Event* event) = 0;	// react to an event passed to the game, and return true if the event was caught
+		virtual bool event(SDL_Event& event) = 0;	// react to an event passed to the game, and return true if the event was caught
 		virtual void update() = 0;			// update game variables based in events/input/etc
 		virtual void render() = 0;			// render graphics output for the frame
 

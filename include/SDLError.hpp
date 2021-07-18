@@ -4,8 +4,8 @@
 * ErrorType enum is used to enumerate the type of error and display relavent information from that subsystem.
 */
 #pragma once
-#ifndef _SDL2_ERROR_H_
-#define _SDL2_ERROR_H_
+#ifndef _SDL2_LILYENGINE_ERROR_HPP_
+#define _SDL2_LILYENGINE_ERROR_HPP_
 
 #include <SDL.h>
 #include <SDL_ttf.h>
@@ -37,4 +37,4 @@ static std::map< ErrorType, std::string > errorString = {
 void error(std::string message, ErrorType error_type = NoneError);
 
 
-#endif /* _SDL2_ERROR_H_ */
+#endif /* _SDL2_LILYENGINE_ERROR_HPP_ */

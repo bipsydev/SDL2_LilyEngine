@@ -11,42 +11,46 @@
 
 #include <string>
 
-/*
-* Creates a Text box message out of an LFont, holds message texture, rect, and parent font.
-*/
-class LTextBox
+namespace LilyEngine
 {
-private:
-	TTF_Font* font;
-	std::string text;
-	SDL_Rect box;
-	SDL_Color color;
 
-	SDL_Surface* message_surface = nullptr;
-	SDL_Texture* message_texture = nullptr;
+	/*
+	* Creates a Text box message out of an LFont, holds message texture, rect, and parent font.
+	*/
+	class LTextBox
+	{
+	private:
+		TTF_Font* font;
+		std::string text;
+		SDL_Rect box;
+		SDL_Color color;
 
-public:
-	LTextBox(TTF_Font* font, std::string text, SDL_Color color = { 0xFF, 0xFF, 0xFF });
-	~LTextBox();
+		SDL_Surface* message_surface = nullptr;
+		SDL_Texture* message_texture = nullptr;
 
-	void setText(std::string newText);
-	std::string getText();
+	public:
+		LTextBox(TTF_Font* font, std::string text, SDL_Color color = { 0xFF, 0xFF, 0xFF });
+		~LTextBox();
 
-	void setColor(SDL_Color newColor);
-	SDL_Color getColor();
+		void setText(std::string newText);
+		std::string getText();
 
-	void setRect(SDL_Rect newBox);
-	SDL_Rect getRect();
+		void setColor(SDL_Color newColor);
+		SDL_Color getColor();
 
-	void setFont(TTF_Font* newFont);
-	TTF_Font* getFont();
+		void setRect(SDL_Rect newBox);
+		SDL_Rect getRect();
 
-	bool render(SDL_Renderer* renderer);
+		void setFont(TTF_Font* newFont);
+		TTF_Font* getFont();
 
-private:
-	bool create_texture(SDL_Renderer* renderer);
+		bool render(SDL_Renderer* renderer);
 
-};
+	private:
+		bool create_texture(SDL_Renderer* renderer);
 
+	};
+
+}
 
 #endif /* _SDL2_LTEXTBOX_H_ */

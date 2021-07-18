@@ -14,6 +14,7 @@
 
 // My engine headers
 #include "Clock.hpp"
+#include "LTextBox.hpp"
 
 // SDL headers
 #include <SDL.h>
@@ -39,7 +40,7 @@ namespace LilyEngine {
 
 	protected:
 		// Initialize your game objects, global variables, set inputs, load resources, configure systems, etc.
-		virtual void init() = 0;
+		virtual bool init() = 0;
 
 		// The main game loop, run() will call these functions every frame:
 		virtual bool event(SDL_Event& event) = 0;	// React to an event (window close, key press, etc), return true if the event was handled.
@@ -52,6 +53,8 @@ namespace LilyEngine {
 	private:
 		SDL_Window* window;
 		SDL_Renderer* renderer;
+		TTF_Font* font;
+		LilyEngine::LTextBox* textbox;
 		LilyEngine::Clock clock{};
 
 		// init SDL and subsystems.

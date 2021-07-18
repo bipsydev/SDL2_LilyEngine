@@ -30,8 +30,8 @@ void ExampleGame::run()
 
 
 
-void ExampleGame::init() {
-
+bool ExampleGame::init() {
+	return true;
 }
 
 bool ExampleGame::event(SDL_Event& event) {

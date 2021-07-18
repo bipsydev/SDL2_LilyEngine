@@ -23,7 +23,7 @@ public:
 
 	void run() override;
 
-	void init() override;
+	bool init() override;
 	bool event(SDL_Event& event) override;
 	void update() override;
 	void render() override;

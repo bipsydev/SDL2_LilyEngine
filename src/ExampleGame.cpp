@@ -20,9 +20,6 @@ ExampleGame::ExampleGame(std::string title)
 {
 }
 
-/**
- * @brief Calls BaseGame::run().
- */
 void ExampleGame::run()
 {
 	BaseGame::run();
@@ -30,24 +27,32 @@ void ExampleGame::run()
 
 
 
-bool ExampleGame::init() {
+bool ExampleGame::init()
+{
+	// Load a text box
+	textbox = new LilyEngine::LTextBox(getFont(), "Here is some default text!");
 	return true;
 }
 
-bool ExampleGame::event(SDL_Event& event) {
+bool ExampleGame::event(SDL_Event& event)
+{
 	return false;
 }
 
-void ExampleGame::update() {
+void ExampleGame::update()
+{
 
 }
 
-void ExampleGame::render() {
-
+void ExampleGame::render()
+{
+	textbox->render(getRenderer());
 }
 
-void ExampleGame::cleanup() {
-
+void ExampleGame::cleanup()
+{
+	// free resources
+	delete textbox;
 }
 
 /**

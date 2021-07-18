@@ -38,7 +38,13 @@ namespace LilyEngine {
 		// Runs the engine game loop.
 		virtual void run();
 
+		// Public methods
+		SDL_Point getWindowSize();
+
+		static BaseGame* getGame();
+
 	protected:
+		// ------- Game Loop (abstract methods) -------
 		// Initialize your game objects, global variables, set inputs, load resources, configure systems, etc.
 		virtual bool init() = 0;
 
@@ -50,11 +56,15 @@ namespace LilyEngine {
 		// Save the game if needed, unload resources, quit systems.
 		virtual void cleanup() = 0;
 
+		SDL_Window* getWindow();
+		SDL_Renderer* getRenderer();
+		TTF_Font* getFont();
+
 	private:
+		int win_width, win_height;		// The window width and height, set every resize.
 		SDL_Window* window;
 		SDL_Renderer* renderer;
 		TTF_Font* font;
-		LilyEngine::LTextBox* textbox;
 		LilyEngine::Clock clock{};
 
 		// init SDL and subsystems.
@@ -68,16 +78,18 @@ namespace LilyEngine {
 		bool load_engine_resources();
 
 		// behind the scenes engine updating, every frame
-		bool engine_handle_events();
+		bool engine_handle_event(SDL_Event& event);
 		void engine_update();
 		void engine_render();
 
 		// clean up all engine systems & resources
 		void engine_clean();
-
-
 	};
 
+	/**
+	 * @brief Extern pointer to the current game instance.
+	 */
+	extern BaseGame* instance;
 }
 
 #endif /* _SDL2_LILYENGINE_BASEGAME_HPP_ */

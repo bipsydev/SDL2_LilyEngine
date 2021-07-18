@@ -12,7 +12,11 @@
 #include "BaseGame.hpp"
 #include <iostream>
 
-namespace LilyEngine {
+namespace LilyEngine
+{
+
+	// define static variable
+	BaseGame* instance;
 
 	/**
 	 * @brief Construct a BaseGame object, with a given title, window size, and autorun flag.
@@ -43,7 +47,9 @@ namespace LilyEngine {
 		}
 		printf("Resources initialized!");
 
+		SDL_GetWindowSize(window, &win_width, &win_height);
 		clock.running = true;	// Start the game clock, needed to run the game.
+		instance = this;		// Set the game pointer to this game.
 		std::cout << "Engine Initialized!" << std::endl;
 
 		if(autorun) run();
@@ -64,29 +70,25 @@ namespace LilyEngine {
 		printf("Game initialized!");
 
 		std::cout << "Running game..." << std::endl;
-		SDL_Event event;
+		SDL_Event _event;
 
 		while (clock.running)
 		{
-			while (SDL_PollEvent(&event))
+			while (SDL_PollEvent(&_event))
 			{
-				switch (event.type)
-				{
-				case SDL_QUIT:
-					clock.running = false;
-					break;
-
-				case SDL_KEYDOWN:
-					if (event.key.keysym.sym == SDLK_ESCAPE)
-					{
-						clock.running = false;
-					}
+				if(!engine_handle_event(_event)) {
+					event(_event);
 				}
+				
 			}
+
+			engine_update();
+			update();
 
 			SDL_SetRenderDrawColor(renderer, clock.ticks, clock.ticks, clock.ticks, SDL_ALPHA_OPAQUE);
 			SDL_RenderClear(renderer);
-
+			engine_render();
+			render();
 			SDL_RenderPresent(renderer);
 			clock.tick();
 		}
@@ -97,22 +99,49 @@ namespace LilyEngine {
 	 */
 	BaseGame::~BaseGame()
 	{
+		// Clean up system objects.
 		SDL_DestroyRenderer(renderer);
 		SDL_DestroyWindow(window);
 
+		// Quit SDL subsystems.
 		TTF_Quit();
 		SDL_Quit();
+		//delete this_game;	// Delete the game pointer.
+	}
+
+	// -- Public Methods -- //
+	
+	SDL_Point BaseGame::getWindowSize() 
+	{
+		return SDL_Point{ win_width, win_height };
 	}
 	
+	BaseGame* BaseGame::getGame() 
+	{
+		return instance;
+	}
+	
+	SDL_Window* BaseGame::getWindow() 
+	{
+		return window;
+	}
+	
+	SDL_Renderer* BaseGame::getRenderer() 
+	{
+		return renderer;
+	}
+	
+	TTF_Font* BaseGame::getFont() 
+	{
+		return font;
+	}
 
 
 	/* 
 	 * ---------------------------------------
-	 * Private Methods - Engine implementation
+	 * Private Methods - Engine implementation, do NOT use!
 	 * ---------------------------------------
 	 */ 
-
-
 
 	/**
 	 * @brief Private internal method to initialize SDL systems.
@@ -167,16 +196,13 @@ namespace LilyEngine {
 	{
 		// Load a font
 		std::string font_path = "resources/712_serif.ttf";
-		font = TTF_OpenFont(font_path.c_str(), 24);
+		font = TTF_OpenFont(font_path.c_str(), 32);
 		if (font == NULL)
 		{
 			error("Unable to load font \"" + font_path + "\".", TTF);
 			return false;
 		}
 
-		// Load a text box
-		textbox = new LTextBox(font, "Here is some default text!");
-		textbox->setRect(SDL_Rect{ 50, 50, 590, 430 });
 		return true;
 	}
 	
@@ -185,8 +211,22 @@ namespace LilyEngine {
 	 * 
 	 * @return true if the event was handled, false otherwise and needs to be handled by the game implementation.
 	 */
-	bool BaseGame::engine_handle_events() 
+	bool BaseGame::engine_handle_event(SDL_Event& _event) 
 	{
+		switch (_event.type)
+		{
+		case SDL_QUIT:
+			clock.running = false;
+			return true;
+
+		case SDL_KEYDOWN:
+			if (_event.key.keysym.sym == SDLK_ESCAPE)
+			{
+				clock.running = false;
+			}
+			return true;
+		}
+		// event not handled
 		return false;
 	}
 	
@@ -200,8 +240,7 @@ namespace LilyEngine {
 	
 	void BaseGame::engine_render() 
 	{
-		textbox->render(renderer);
-		SDL_RenderPresent(renderer);
+		//SDL_RenderPresent(renderer);
 	}
 	
 	/**
@@ -209,8 +248,6 @@ namespace LilyEngine {
 	 */
 	void BaseGame::engine_clean() 
 	{
-		// free resources
-		delete textbox;
 		TTF_CloseFont(font);
 		// free SDL subsystems
 		SDL_DestroyWindow(window);

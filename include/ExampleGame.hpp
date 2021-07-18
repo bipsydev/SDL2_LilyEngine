@@ -17,6 +17,8 @@
 class ExampleGame: public LilyEngine::BaseGame
 {
 private:
+	LilyEngine::LTextBox* textbox;
+	
 public:
 	ExampleGame(std::string title = "This is an Example Game!");
 	~ExampleGame();

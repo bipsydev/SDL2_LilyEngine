@@ -22,8 +22,7 @@
 				"-lSDL2main",
 				"-lSDL2",
 				"-lSDL2_ttf",
-				"-lSDL2_image",
-				"-mwindows"
+				"-lSDL2_image"
 			],
 			"options": {
 				"cwd": "${workspaceFolder}"

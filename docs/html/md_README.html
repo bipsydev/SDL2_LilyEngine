@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('md_README.html',''); initResizable(); 
  At its core, __<code>SDL2_LilyEngine</code>__ will be a <em>static library</em> of components for easy SDL operations. A <em>framework</em> for creating your own game class via inheritance can be used, or you can use the libraries individually. Additionally in the future, I plan to make a <em>graphical interface</em> to the engine that outputs C++ code! <br  />
 </p>
 <hr  />
-<p>It will provide one main abstract <code>LilyEngine::BaseGame</code> class with 5 pure virtual methods: </p><div class="fragment"><div class="line"> {C++}</div>
+<p>It will provide one main abstract <code><a class="el" href="classLilyEngine_1_1BaseGame.html" title="Abstract base class for all games made with SDL_LilyEngine. Inherit for your own game,...">LilyEngine::BaseGame</a></code> class with 5 pure virtual methods: </p><div class="fragment"><div class="line"> {C++}</div>
 <div class="line">namespace LilyEngine {</div>
 <div class="line">    class BaseGame {</div>
 <div class="line">    protected:</div>
@@ -101,7 +101,7 @@ $(document).ready(function(){initNavTree('md_README.html',''); initResizable(); 
 <div class="line">        virtual void init(string title) = 0;</div>
 <div class="line"> </div>
 <div class="line">        // Main game loop, runs every frame:</div>
-<div class="line">        virtual bool event(SDL_Event* event) = 0;   // react to an event passed to the game, and return true if the event was caught</div>
+<div class="line">        virtual bool event(SDL_Event&amp; event) = 0;   // react to an event passed to the game, and return true if the event was caught</div>
 <div class="line">        virtual void update() = 0;          // update game variables based in events/input/etc</div>
 <div class="line">        virtual void render() = 0;          // render graphics output for the frame</div>
 <div class="line"> </div>
@@ -109,7 +109,7 @@ $(document).ready(function(){initNavTree('md_README.html',''); initResizable(); 
 <div class="line">        virtual void cleanup() = 0;</div>
 <div class="line">    };</div>
 <div class="line">}</div>
-</div><!-- fragment --><p> This way, you can inherit from <code><a class="el" href="classBaseGame.html">BaseGame</a></code> and make your own <code>MyWackyGame</code> class overriding the virtual methods, and then run the game in your main method: </p><div class="fragment"><div class="line"> {C++}</div>
+</div><!-- fragment --><p> This way, you can inherit from <code>BaseGame</code> and make your own <code>MyWackyGame</code> class overriding the virtual methods, and then run the game in your main method: </p><div class="fragment"><div class="line"> {C++}</div>
 <div class="line">int main(int argv, char** args) {</div>
 <div class="line">    MyWackyGame* game = new MyWackyGame();</div>
 <div class="line">    int exit_val = game-&gt;run();</div>
@@ -124,11 +124,11 @@ $(document).ready(function(){initNavTree('md_README.html',''); initResizable(); 
 <div class="line">namespace LilyEngine {</div>
 <div class="line">    class BaseGame {</div>
 <div class="line">    protected:</div>
-<div class="line">        LilyEngine:Clock clock;         // holds game time, frame number, delta time, can cap fps or enable vsync</div>
-<div class="line">        LilyEngine:StageManager stageManager;   // manages your Stages, sets the active stage and updates it with all its actors</div>
-<div class="line">        LilyEngine:Graphics graphics;       // graphics loading/rendering module, creates sprites, fonts, and shape drawing</div>
-<div class="line">        LilyEngine:Audio audio;         // audio module for loading/playing sounds</div>
-<div class="line">        LilyEngine:Input input;         // input module for querying controls</div>
+<div class="line">        LilyEngine::Clock clock;        // holds game time, frame number, delta time, can cap fps or enable vsync</div>
+<div class="line">        LilyEngine::StageManager stageManager;  // manages your Stages, sets the active stage and updates it with all its actors</div>
+<div class="line">        LilyEngine::Graphics graphics;      // graphics loading/rendering module, creates sprites, fonts, and shape drawing</div>
+<div class="line">        LilyEngine::Audio audio;        // audio module for loading/playing sounds</div>
+<div class="line">        LilyEngine::Input input;        // input module for querying controls</div>
 <div class="line">    };</div>
 <div class="line">}</div>
 </div><!-- fragment --><p> The <em>stage</em> and <em>actor</em> system is used to create game actors and add them to a stage. The <code>LilyEngine::Actor</code> abstract class can be inherited to create your own game object classes. The <code>LilyEngine::Stage</code> class can be filled with Actors, subsequently saved or loaded, and hold cameras and room information. The <code>LilyEngine::StageManager</code> controls the current stage, keeps loaded stages running, and can script stages/scenes together and run/save them! </p><div class="fragment"><div class="line"> {C++}</div>
@@ -256,7 +256,7 @@ Event Handling</h3>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Jul 13 2021 18:55:48 for SDL2_LilyEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Sun Jul 18 2021 18:28:08 for SDL2_LilyEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

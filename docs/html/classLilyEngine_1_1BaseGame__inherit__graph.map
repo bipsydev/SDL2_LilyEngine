@@ -1,0 +1,4 @@
+<map id="LilyEngine::BaseGame" name="LilyEngine::BaseGame">
+<area shape="rect" id="node1" title="Abstract base class for all games made with SDL_LilyEngine. Inherit for your own game,..." alt="" coords="5,5,176,420"/>
+<area shape="rect" id="node2" href="$classExampleGame.html" title=" " alt="" coords="23,468,159,648"/>
+</map>

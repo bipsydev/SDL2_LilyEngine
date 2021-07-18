@@ -1,0 +1,4 @@
+<map id="LilyEngine::LTextBox::create_surface" name="LilyEngine::LTextBox::create_surface">
+<area shape="rect" id="node1" title="Creates the SDL_Surface from the saved font, text, and color." alt="" coords="5,5,151,47"/>
+<area shape="rect" id="node2" href="$SDLError_8hpp.html#a6cf67483ac778554c32cae3970d6c5e6" title="report an error to the console, with relevant SDL module error, and pause the console to read." alt="" coords="199,13,247,39"/>
+</map>

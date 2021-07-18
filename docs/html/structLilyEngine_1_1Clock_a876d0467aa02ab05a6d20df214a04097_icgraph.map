@@ -1,0 +1,5 @@
+<map id="LilyEngine::Clock::tick" name="LilyEngine::Clock::tick">
+<area shape="rect" id="node1" title="This will update game time variables based on SDL_GetTicks(), then delay based on desired FPS...." alt="" coords="437,13,589,39"/>
+<area shape="rect" id="node2" href="$classLilyEngine_1_1BaseGame.html#a32ac96c8284fa2d0fe8f6457d2e2ae0b" title="The main game loop. Updates clock, checks for events, updates game logic, and renders the screen...." alt="" coords="208,13,389,39"/>
+<area shape="rect" id="node3" href="$classLilyEngine_1_1BaseGame.html#a741346520f579d78743a8b4d261b7b24" title="Construct a BaseGame object, with a given title, window size, and autorun flag. Initializes SDL and i..." alt="" coords="5,5,160,47"/>
+</map>

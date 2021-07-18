@@ -1,0 +1,4 @@
+<map id="LilyEngine::BaseGame::load_engine_resources" name="LilyEngine::BaseGame::load_engine_resources">
+<area shape="rect" id="node1" title="Loads internal engine resources, like a default font, etc." alt="" coords="5,5,168,47"/>
+<area shape="rect" id="node2" href="$SDLError_8hpp.html#a6cf67483ac778554c32cae3970d6c5e6" title="report an error to the console, with relevant SDL module error, and pause the console to read." alt="" coords="216,13,264,39"/>
+</map>

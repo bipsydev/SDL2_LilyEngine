@@ -89,32 +89,70 @@ $(document).ready(function(){initNavTree('ExampleGame_8cpp_source.html',''); ini
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ExampleGame_8hpp.html">ExampleGame.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classExampleGame.html#a38f26de67f2485cd03b5e48b6b98609f">   18</a></span>&#160;<a class="code" href="classExampleGame.html#a38f26de67f2485cd03b5e48b6b98609f">ExampleGame::ExampleGame</a>()</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;: <a class="code" href="classBaseGame.html">BaseGame</a>(<span class="stringliteral">&quot;This is an Example Game!&quot;</span>, 640, 480, false)</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classExampleGame.html#a5bbe587c375c7458b977e876f2d82d79">   18</a></span>&#160;<a class="code" href="classExampleGame.html#a5bbe587c375c7458b977e876f2d82d79">ExampleGame::ExampleGame</a>(std::string title)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;: BaseGame(title.c_str(), 640, 480, false)</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classExampleGame.html#a49a0d9e6dc57dc9da4431cc60a508785">   26</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classExampleGame.html#a49a0d9e6dc57dc9da4431cc60a508785">ExampleGame::run</a>()</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classBaseGame.html#a8cca19edcb875b30e47cca2a255b0916">BaseGame::run</a>();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classExampleGame.html#aaae94a06bd591b35cf083552f3fd0961">   34</a></span>&#160;<a class="code" href="classExampleGame.html#aaae94a06bd591b35cf083552f3fd0961">ExampleGame::~ExampleGame</a>()</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classExampleGame.html#a49a0d9e6dc57dc9da4431cc60a508785">   23</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classExampleGame.html#a49a0d9e6dc57dc9da4431cc60a508785">ExampleGame::run</a>()</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    BaseGame::run();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classExampleGame.html#a0690743fddef127a10830accdf016768">   30</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classExampleGame.html#a0690743fddef127a10830accdf016768">ExampleGame::init</a>()</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">// Load a text box</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classExampleGame.html#abedbc978c7f94a36f1c879214b9eff67">textbox</a> = <span class="keyword">new</span> <a class="code" href="classLilyEngine_1_1LTextBox.html">LilyEngine::LTextBox</a>(<a class="code" href="classLilyEngine_1_1BaseGame.html#af1fec4c3473756129d3cd70b7a3d4532">getFont</a>(), <span class="stringliteral">&quot;Here is some default text!&quot;</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classExampleGame.html#a7b6c9c1fa7011db248f49bf1c1e938a0">   37</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classExampleGame.html#a7b6c9c1fa7011db248f49bf1c1e938a0">ExampleGame::event</a>(SDL_Event&amp; event)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classExampleGame.html#a9f130555e8f269d34ff5cd407e99fc9f">   42</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classExampleGame.html#a9f130555e8f269d34ff5cd407e99fc9f">ExampleGame::update</a>()</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classExampleGame.html#ae58accf4e694fcb386d41d2b99a78d1a">   47</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classExampleGame.html#ae58accf4e694fcb386d41d2b99a78d1a">ExampleGame::render</a>()</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="classExampleGame.html#abedbc978c7f94a36f1c879214b9eff67">textbox</a>-&gt;<a class="code" href="classLilyEngine_1_1LTextBox.html#aa0b0a3efd89dbb6301322454078b4cda">render</a>(<a class="code" href="classLilyEngine_1_1BaseGame.html#abd33984f72847a1eee9f1083f8e34091">getRenderer</a>());</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classExampleGame.html#a2dc5fa547cb062fe9cc5e839bed7a8f0">   52</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classExampleGame.html#a2dc5fa547cb062fe9cc5e839bed7a8f0">ExampleGame::cleanup</a>()</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">// free resources</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">delete</span> <a class="code" href="classExampleGame.html#abedbc978c7f94a36f1c879214b9eff67">textbox</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classExampleGame.html#aaae94a06bd591b35cf083552f3fd0961">   61</a></span>&#160;<a class="code" href="classExampleGame.html#aaae94a06bd591b35cf083552f3fd0961">ExampleGame::~ExampleGame</a>()</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
 <div class="ttc" id="aExampleGame_8hpp_html"><div class="ttname"><a href="ExampleGame_8hpp.html">ExampleGame.hpp</a></div><div class="ttdoc">Example template game for the game engine.</div></div>
-<div class="ttc" id="aclassBaseGame_html"><div class="ttname"><a href="classBaseGame.html">BaseGame</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseGame_8hpp_source.html#l00019">BaseGame.hpp:20</a></div></div>
-<div class="ttc" id="aclassBaseGame_html_a8cca19edcb875b30e47cca2a255b0916"><div class="ttname"><a href="classBaseGame.html#a8cca19edcb875b30e47cca2a255b0916">BaseGame::run</a></div><div class="ttdeci">virtual void run()</div><div class="ttdoc">The main game loop. Updates clock, checks for events, updates game logic, and renders the screen....</div><div class="ttdef"><b>Definition:</b> <a href="BaseGame_8cpp_source.html#l00070">BaseGame.cpp:70</a></div></div>
-<div class="ttc" id="aclassExampleGame_html_a38f26de67f2485cd03b5e48b6b98609f"><div class="ttname"><a href="classExampleGame.html#a38f26de67f2485cd03b5e48b6b98609f">ExampleGame::ExampleGame</a></div><div class="ttdeci">ExampleGame()</div><div class="ttdoc">Construct a new Example Game object Sets window title, size, and autorun.</div><div class="ttdef"><b>Definition:</b> <a href="ExampleGame_8cpp_source.html#l00018">ExampleGame.cpp:18</a></div></div>
-<div class="ttc" id="aclassExampleGame_html_a49a0d9e6dc57dc9da4431cc60a508785"><div class="ttname"><a href="classExampleGame.html#a49a0d9e6dc57dc9da4431cc60a508785">ExampleGame::run</a></div><div class="ttdeci">void run() override</div><div class="ttdoc">Calls BaseGame::run().</div><div class="ttdef"><b>Definition:</b> <a href="ExampleGame_8cpp_source.html#l00026">ExampleGame.cpp:26</a></div></div>
-<div class="ttc" id="aclassExampleGame_html_aaae94a06bd591b35cf083552f3fd0961"><div class="ttname"><a href="classExampleGame.html#aaae94a06bd591b35cf083552f3fd0961">ExampleGame::~ExampleGame</a></div><div class="ttdeci">~ExampleGame()</div><div class="ttdoc">Frees up ExampleGame resources from memory.</div><div class="ttdef"><b>Definition:</b> <a href="ExampleGame_8cpp_source.html#l00034">ExampleGame.cpp:34</a></div></div>
+<div class="ttc" id="aclassExampleGame_html_a0690743fddef127a10830accdf016768"><div class="ttname"><a href="classExampleGame.html#a0690743fddef127a10830accdf016768">ExampleGame::init</a></div><div class="ttdeci">bool init() override</div><div class="ttdef"><b>Definition:</b> <a href="ExampleGame_8cpp_source.html#l00030">ExampleGame.cpp:30</a></div></div>
+<div class="ttc" id="aclassExampleGame_html_a2dc5fa547cb062fe9cc5e839bed7a8f0"><div class="ttname"><a href="classExampleGame.html#a2dc5fa547cb062fe9cc5e839bed7a8f0">ExampleGame::cleanup</a></div><div class="ttdeci">void cleanup() override</div><div class="ttdef"><b>Definition:</b> <a href="ExampleGame_8cpp_source.html#l00052">ExampleGame.cpp:52</a></div></div>
+<div class="ttc" id="aclassExampleGame_html_a49a0d9e6dc57dc9da4431cc60a508785"><div class="ttname"><a href="classExampleGame.html#a49a0d9e6dc57dc9da4431cc60a508785">ExampleGame::run</a></div><div class="ttdeci">void run() override</div><div class="ttdoc">The main game loop. Updates clock, checks for events, updates game logic, and renders the screen....</div><div class="ttdef"><b>Definition:</b> <a href="ExampleGame_8cpp_source.html#l00023">ExampleGame.cpp:23</a></div></div>
+<div class="ttc" id="aclassExampleGame_html_a5bbe587c375c7458b977e876f2d82d79"><div class="ttname"><a href="classExampleGame.html#a5bbe587c375c7458b977e876f2d82d79">ExampleGame::ExampleGame</a></div><div class="ttdeci">ExampleGame(std::string title=&quot;This is an Example Game!&quot;)</div><div class="ttdoc">Construct a new Example Game object Sets window title, size, and autorun.</div><div class="ttdef"><b>Definition:</b> <a href="ExampleGame_8cpp_source.html#l00018">ExampleGame.cpp:18</a></div></div>
+<div class="ttc" id="aclassExampleGame_html_a7b6c9c1fa7011db248f49bf1c1e938a0"><div class="ttname"><a href="classExampleGame.html#a7b6c9c1fa7011db248f49bf1c1e938a0">ExampleGame::event</a></div><div class="ttdeci">bool event(SDL_Event &amp;event) override</div><div class="ttdef"><b>Definition:</b> <a href="ExampleGame_8cpp_source.html#l00037">ExampleGame.cpp:37</a></div></div>
+<div class="ttc" id="aclassExampleGame_html_a9f130555e8f269d34ff5cd407e99fc9f"><div class="ttname"><a href="classExampleGame.html#a9f130555e8f269d34ff5cd407e99fc9f">ExampleGame::update</a></div><div class="ttdeci">void update() override</div><div class="ttdef"><b>Definition:</b> <a href="ExampleGame_8cpp_source.html#l00042">ExampleGame.cpp:42</a></div></div>
+<div class="ttc" id="aclassExampleGame_html_aaae94a06bd591b35cf083552f3fd0961"><div class="ttname"><a href="classExampleGame.html#aaae94a06bd591b35cf083552f3fd0961">ExampleGame::~ExampleGame</a></div><div class="ttdeci">~ExampleGame()</div><div class="ttdoc">Frees up ExampleGame resources from memory.</div><div class="ttdef"><b>Definition:</b> <a href="ExampleGame_8cpp_source.html#l00061">ExampleGame.cpp:61</a></div></div>
+<div class="ttc" id="aclassExampleGame_html_abedbc978c7f94a36f1c879214b9eff67"><div class="ttname"><a href="classExampleGame.html#abedbc978c7f94a36f1c879214b9eff67">ExampleGame::textbox</a></div><div class="ttdeci">LilyEngine::LTextBox * textbox</div><div class="ttdef"><b>Definition:</b> <a href="ExampleGame_8hpp_source.html#l00020">ExampleGame.hpp:20</a></div></div>
+<div class="ttc" id="aclassExampleGame_html_ae58accf4e694fcb386d41d2b99a78d1a"><div class="ttname"><a href="classExampleGame.html#ae58accf4e694fcb386d41d2b99a78d1a">ExampleGame::render</a></div><div class="ttdeci">void render() override</div><div class="ttdef"><b>Definition:</b> <a href="ExampleGame_8cpp_source.html#l00047">ExampleGame.cpp:47</a></div></div>
+<div class="ttc" id="aclassLilyEngine_1_1BaseGame_html_abd33984f72847a1eee9f1083f8e34091"><div class="ttname"><a href="classLilyEngine_1_1BaseGame.html#abd33984f72847a1eee9f1083f8e34091">LilyEngine::BaseGame::getRenderer</a></div><div class="ttdeci">SDL_Renderer * getRenderer()</div><div class="ttdef"><b>Definition:</b> <a href="BaseGame_8cpp_source.html#l00129">BaseGame.cpp:129</a></div></div>
+<div class="ttc" id="aclassLilyEngine_1_1BaseGame_html_af1fec4c3473756129d3cd70b7a3d4532"><div class="ttname"><a href="classLilyEngine_1_1BaseGame.html#af1fec4c3473756129d3cd70b7a3d4532">LilyEngine::BaseGame::getFont</a></div><div class="ttdeci">TTF_Font * getFont()</div><div class="ttdef"><b>Definition:</b> <a href="BaseGame_8cpp_source.html#l00134">BaseGame.cpp:134</a></div></div>
+<div class="ttc" id="aclassLilyEngine_1_1LTextBox_html"><div class="ttname"><a href="classLilyEngine_1_1LTextBox.html">LilyEngine::LTextBox</a></div><div class="ttdoc">Creates a Text box message out of a TTF_Font, holds message texture &amp; surface, rect,...</div><div class="ttdef"><b>Definition:</b> <a href="LTextBox_8hpp_source.html#l00019">LTextBox.hpp:20</a></div></div>
+<div class="ttc" id="aclassLilyEngine_1_1LTextBox_html_aa0b0a3efd89dbb6301322454078b4cda"><div class="ttname"><a href="classLilyEngine_1_1LTextBox.html#aa0b0a3efd89dbb6301322454078b4cda">LilyEngine::LTextBox::render</a></div><div class="ttdeci">bool render(SDL_Renderer *renderer)</div><div class="ttdef"><b>Definition:</b> <a href="LTextBox_8cpp_source.html#l00037">LTextBox.cpp:37</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="ExampleGame_8cpp.html">ExampleGame.cpp</a></li>
-    <li class="footer">Generated on Tue Jul 13 2021 18:55:48 for SDL2_LilyEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Sun Jul 18 2021 18:28:08 for SDL2_LilyEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

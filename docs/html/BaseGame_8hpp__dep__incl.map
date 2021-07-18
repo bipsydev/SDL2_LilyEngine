@@ -1,7 +1,8 @@
 <map id="include/BaseGame.hpp" name="include/BaseGame.hpp">
-<area shape="rect" id="node1" title="Main abstract class to inherit for all games made with SDL_LilyEngine." alt="" coords="172,5,329,32"/>
-<area shape="rect" id="node2" href="$SDL2__LilyEngine_8hpp.html" title="Shortcut header file to include all SDL2_LilyEngine files." alt="" coords="62,80,253,107"/>
+<area shape="rect" id="node1" title="Main abstract class to inherit for all games made with SDL_LilyEngine." alt="" coords="265,5,423,32"/>
+<area shape="rect" id="node2" href="$SDL2__LilyEngine_8hpp.html" title="Shortcut header file to include all SDL2_LilyEngine library components." alt="" coords="62,80,253,107"/>
 <area shape="rect" id="node6" href="$BaseGame_8cpp.html" title="Implementation for BaseGame class from BaseGame.hpp." alt="" coords="277,80,411,107"/>
+<area shape="rect" id="node7" href="$LTextBox_8cpp.html" title=" " alt="" coords="435,80,559,107"/>
 <area shape="rect" id="node3" href="$ExampleGame_8hpp.html" title="Example template game for the game engine." alt="" coords="68,155,247,181"/>
 <area shape="rect" id="node4" href="$ExampleGame_8cpp.html" title="Implements the ExampleGame class." alt="" coords="5,229,160,256"/>
 <area shape="rect" id="node5" href="$main_8cpp.html" title="Main function to show how to run an example game created with LilyEngine::BaseGame." alt="" coords="185,229,282,256"/>

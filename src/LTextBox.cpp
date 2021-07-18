@@ -81,8 +81,7 @@ namespace LilyEngine
 
 
 	/**
-	 * @brief Sets the text box to the center of the screen, center axis.
-	 * 
+	 * @brief Sets the text box to the center of the screen.
 	 */
 	void LTextBox::setRectCenter()
 	{
@@ -94,11 +93,22 @@ namespace LilyEngine
 		setRect(center_rect);
 	}
 	
+	/**
+	 * @brief Shortcut for setSize(width, height).
+	 * 
+	 * @param point an SDL_Point with the width and height.
+	 */
 	void LTextBox::setSize(SDL_Point point) 
 	{
 		setSize(point.x, point.y);
 	}
 	
+	/**
+	 * @brief Sets the size of the text box rect.
+	 * 
+	 * @param width new width of the text box.
+	 * @param height new height of the text box.
+	 */
 	void LTextBox::setSize(int width, int height) 
 	{
 		SDL_Rect new_rect = getRect();
@@ -107,18 +117,40 @@ namespace LilyEngine
 		setRect(new_rect);
 	}
 	
+	/**
+	 * @brief gets the position of the text box rect as an SDL_Point.
+	 * 
+	 * @return SDL_Point position of the text box.
+	 */
 	SDL_Point LTextBox::getSize() 
 	{
 		return SDL_Point{box.w, box.h};
 	}
 
+	/**
+	 * @brief Sets the position of the text box rect.
+	 * 
+	 * @param newPos the SDL_Point with the new position.
+	 */
 	void LTextBox::setPosition(SDL_Point newPos)
 	{
+		setPosition(newPos.x, newPos.y);
+	}
+
+	/**
+	 * @brief Sets the position of the text box rect.
+	 * 
+	 * @param x new x position of the text box.
+	 * @param y new y position of the text box.
+	 */
+	void LTextBox::setPosition(int x, int y)
+	{
 		SDL_Rect new_rect = getRect();
-		new_rect.x = newPos.x;
-		new_rect.y = newPos.y;
+		new_rect.x = x;
+		new_rect.y = y;
 		setRect(new_rect);
 	}
+
 	SDL_Point LTextBox::getPosition()
 	{
 		return SDL_Point{box.x, box.y};

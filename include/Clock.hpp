@@ -13,6 +13,9 @@
 
 namespace LilyEngine {
 
+	/**
+	 * @brief Clock struct to keep track of game time, delta time, ticks, framerate, vsync, etc.
+	 */
 	struct Clock
 	{
 	public:
@@ -28,12 +31,15 @@ namespace LilyEngine {
 		int minutes = 0;			// minutes since startup
 		int hours = 0;				// hours since startup
 
-		/// <summary>
-		/// This will update game time variables based on SDL_GetTicks(), then delay based on desired FPS.
-		/// isVSyncOn should be set to true if SDL_RENDERER_PRESENTVSYNC was passed to the renderer.
-		/// fps should be only set if vsync is false. -1 is unlimited.
-		/// </summary>
-		void tick(bool isVSyncOn = false, float fps = -1)
+		/**
+		 * @brief This will update game time variables based on SDL_GetTicks(), then delay based on desired FPS.
+		 * isVSyncOn should be set to true if SDL_RENDERER_PRESENTVSYNC was passed to the renderer.
+		 * fps should be only set if vsync is false. -1 is unlimited.
+		 * 
+		 * @param isVSyncOn tell tick() if hardware vsync is on.
+		 * @param fps The desired frame rate.
+		 */
+		void tick(bool isVSyncOn = true, float fps = -1)
 		{
 			Uint64 tick_time = get_time_from_SDL();	// update our tick time from SDL
 			delta = calculate_delta(tick_time);		// get delta time from tick
@@ -41,7 +47,7 @@ namespace LilyEngine {
 			
 			update_clocks();
 
-			if (isVSyncOn)	// if hardware vsync is off and we need to cap framerate...
+			if (!isVSyncOn)	// if hardware vsync is off and we need to cap framerate...
 			{
 				cap_framerate(fps);
 			}
@@ -54,20 +60,23 @@ namespace LilyEngine {
 		}
 
 	private:
-		/// <summary>
-		/// get the time from SDL using system-specific high-resolution timer.
-		/// </summary>
-		/// <returns>SDL_GetPerformanceCounter()</returns>
+		/**
+		 * @brief Get the time from SDL using system-specific high-resolution timer.
+		 * 
+		 * @return Uint64 SDL_GetPerformanceCounter()
+		 */
 		Uint64 get_time_from_SDL()
 		{
 			return SDL_GetPerformanceCounter();
 		}
 
-		/// <summary>
-		/// Calculate the delta time from last tick using new (current) tick time, last tick time, and dividing by performance frequency to get delta seconds.
-		/// </summary>
-		/// <param name="tick_time">Should be from get_time_from_SDL()</param>
-		/// <returns>Delta time in seconds (float).</returns>
+		/**
+		 * @brief Calculate the delta time from last tick using new (current) tick time,
+		 * last tick time, and dividing by performance frequency to get delta seconds.
+		 * 
+		 * @param new_tick_time Should be from get_time_from_SDL()
+		 * @return float Delta time in seconds.
+		 */
 		float calculate_delta(Uint64 new_tick_time)
 		{
 			if (last_tick_time != 0)
@@ -81,9 +90,9 @@ namespace LilyEngine {
 			}
 		}
 
-		/// <summary>
-		/// Update seconds, minutes, and hours after delta has been calculated.
-		/// </summary>
+		/**
+		 * @brief Update seconds, minutes, and hours after delta has been calculated.
+		 */
 		void update_clocks()
 		{
 			seconds += delta;						// add delta time to our seconds counter
@@ -93,11 +102,12 @@ namespace LilyEngine {
 			//verbose_debug(println("Game Time: " << seconds << "s, " << minutes << "m, " << hours << "h."));
 			//verbose_debug(print("delta: " << delta));
 		}
-
-		/// <summary>
-		/// Halt program execution according to desired target FPS.
-		/// </summary>
-		/// <param name="desired_fps"></param>
+		
+		/**
+		 * @brief Halt program execution according to desired target FPS.
+		 * 
+		 * @param desired_fps target FPS to cap framerate at.
+		 */
 		void cap_framerate(float desired_fps)
 		{
 			float desired_delta = (1.0f / desired_fps) * 1000.0f;	// calculate desired ms between frames from desired FPS

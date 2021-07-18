@@ -83,7 +83,9 @@ $(document).ready(function(){initNavTree('BaseGame_8hpp.html',''); initResizable
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">BaseGame.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -91,18 +93,26 @@ $(document).ready(function(){initNavTree('BaseGame_8hpp.html',''); initResizable
 
 <p>Main abstract class to inherit for all games made with SDL_LilyEngine.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;SDL.h&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="Clock_8hpp_source.html">Clock.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="LTextBox_8hpp_source.html">LTextBox.hpp</a>&quot;</code><br />
+<code>#include &lt;SDL.h&gt;</code><br />
 <code>#include &lt;SDL_image.h&gt;</code><br />
 <code>#include &lt;SDL_ttf.h&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for BaseGame.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="BaseGame_8hpp__incl.png" border="0" usemap="#ainclude_2BaseGame_8hpp" alt=""/></div>
 <map name="ainclude_2BaseGame_8hpp" id="ainclude_2BaseGame_8hpp">
-<area shape="rect" title="Main abstract class to inherit for all games made with SDL_LilyEngine." alt="" coords="60,5,217,32"/>
-<area shape="rect" title=" " alt="" coords="5,80,64,107"/>
-<area shape="rect" title=" " alt="" coords="89,80,189,107"/>
-<area shape="rect" title=" " alt="" coords="213,80,289,107"/>
+<area shape="rect" title="Main abstract class to inherit for all games made with SDL_LilyEngine." alt="" coords="157,5,314,32"/>
+<area shape="rect" href="Clock_8hpp.html" title=" " alt="" coords="298,80,378,107"/>
+<area shape="rect" title=" " alt="" coords="218,155,277,181"/>
+<area shape="rect" href="LTextBox_8hpp.html" title=" " alt="" coords="69,80,172,107"/>
+<area shape="rect" title=" " alt="" coords="5,155,81,181"/>
+<area shape="rect" title=" " alt="" coords="128,155,183,181"/>
+<area shape="rect" title=" " alt="" coords="403,80,503,107"/>
+<area shape="rect" title=" " alt="" coords="400,155,463,181"/>
+<area shape="rect" title=" " alt="" coords="301,155,375,181"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -110,9 +120,10 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="BaseGame_8hpp__dep__incl.png" border="0" usemap="#ainclude_2BaseGame_8hppdep" alt=""/></div>
 <map name="ainclude_2BaseGame_8hppdep" id="ainclude_2BaseGame_8hppdep">
-<area shape="rect" title="Main abstract class to inherit for all games made with SDL_LilyEngine." alt="" coords="172,5,329,32"/>
-<area shape="rect" href="SDL2__LilyEngine_8hpp.html" title="Shortcut header file to include all SDL2_LilyEngine files." alt="" coords="62,80,253,107"/>
+<area shape="rect" title="Main abstract class to inherit for all games made with SDL_LilyEngine." alt="" coords="265,5,423,32"/>
+<area shape="rect" href="SDL2__LilyEngine_8hpp.html" title="Shortcut header file to include all SDL2_LilyEngine library components." alt="" coords="62,80,253,107"/>
 <area shape="rect" href="BaseGame_8cpp.html" title="Implementation for BaseGame class from BaseGame.hpp." alt="" coords="277,80,411,107"/>
+<area shape="rect" href="LTextBox_8cpp.html" title=" " alt="" coords="435,80,559,107"/>
 <area shape="rect" href="ExampleGame_8hpp.html" title="Example template game for the game engine." alt="" coords="68,155,247,181"/>
 <area shape="rect" href="ExampleGame_8cpp.html" title="Implements the ExampleGame class." alt="" coords="5,229,160,256"/>
 <area shape="rect" href="main_8cpp.html" title="Main function to show how to run an example game created with LilyEngine::BaseGame." alt="" coords="185,229,282,256"/>
@@ -123,13 +134,26 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseGame.html">BaseGame</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLilyEngine_1_1BaseGame.html">LilyEngine::BaseGame</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract base class for all games made with SDL_LilyEngine. Inherit for your own game, and implement the virtual functions.  <a href="classLilyEngine_1_1BaseGame.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespaceLilyEngine"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLilyEngine.html">LilyEngine</a></td></tr>
+<tr class="memdesc:namespaceLilyEngine"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace for all engine components. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:ad7046bb56ae2fbc25b9adaad2ab2d38e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BaseGame_8hpp.html#ad7046bb56ae2fbc25b9adaad2ab2d38e">_SDL2_LILYENGINE_BASEGAME_HPP_</a></td></tr>
 <tr class="separator:ad7046bb56ae2fbc25b9adaad2ab2d38e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:adf48280f0203a69367a2e38d411aa53c"><td class="memItemLeft" align="right" valign="top">BaseGame *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLilyEngine.html#adf48280f0203a69367a2e38d411aa53c">LilyEngine::instance</a></td></tr>
+<tr class="memdesc:adf48280f0203a69367a2e38d411aa53c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extern pointer to the current game instance.  <a href="namespaceLilyEngine.html#adf48280f0203a69367a2e38d411aa53c">More...</a><br /></td></tr>
+<tr class="separator:adf48280f0203a69367a2e38d411aa53c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Main abstract class to inherit for all games made with SDL_LilyEngine. </p>
@@ -162,7 +186,7 @@ Macros</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="BaseGame_8hpp.html">BaseGame.hpp</a></li>
-    <li class="footer">Generated on Tue Jul 13 2021 18:55:48 for SDL2_LilyEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Sun Jul 18 2021 18:28:08 for SDL2_LilyEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

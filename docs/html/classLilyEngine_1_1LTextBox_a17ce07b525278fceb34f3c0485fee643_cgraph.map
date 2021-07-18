@@ -1,0 +1,6 @@
+<map id="LilyEngine::LTextBox::setRectCenter" name="LilyEngine::LTextBox::setRectCenter">
+<area shape="rect" id="node1" title="Sets the text box to the center of the screen." alt="" coords="5,71,151,112"/>
+<area shape="rect" id="node2" href="$classLilyEngine_1_1LTextBox.html#a670ab8ef260fb2001b297c28bdf8e037" title="Get&#39;s the width and height of the text surface." alt="" coords="203,5,349,47"/>
+<area shape="rect" id="node3" href="$classLilyEngine_1_1BaseGame.html#a03cfb862f48ad7889c4bf86126cfd9c5" title=" " alt="" coords="199,71,353,112"/>
+<area shape="rect" id="node4" href="$classLilyEngine_1_1LTextBox.html#a11addc81464d18aedefd3413450090a2" title=" " alt="" coords="203,136,349,177"/>
+</map>

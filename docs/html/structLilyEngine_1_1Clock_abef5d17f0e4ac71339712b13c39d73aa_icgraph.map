@@ -1,0 +1,6 @@
+<map id="LilyEngine::Clock::calculate_delta" name="LilyEngine::Clock::calculate_delta">
+<area shape="rect" id="node1" title="Calculate the delta time from last tick using new (current) tick time, last tick time,..." alt="" coords="637,5,768,47"/>
+<area shape="rect" id="node2" href="$structLilyEngine_1_1Clock.html#a9e4494a4231d9f982254420c0606a250" title="This will update game time variables based on SDL_GetTicks(), then delay based on desired FPS...." alt="" coords="437,13,589,39"/>
+<area shape="rect" id="node3" href="$classLilyEngine_1_1BaseGame.html#a32ac96c8284fa2d0fe8f6457d2e2ae0b" title="The main game loop. Updates clock, checks for events, updates game logic, and renders the screen...." alt="" coords="208,13,389,39"/>
+<area shape="rect" id="node4" href="$classLilyEngine_1_1BaseGame.html#a741346520f579d78743a8b4d261b7b24" title="Construct a BaseGame object, with a given title, window size, and autorun flag. Initializes SDL and i..." alt="" coords="5,5,160,47"/>
+</map>

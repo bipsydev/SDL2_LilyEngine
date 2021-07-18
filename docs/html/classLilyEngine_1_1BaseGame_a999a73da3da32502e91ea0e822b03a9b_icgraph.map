@@ -1,0 +1,4 @@
+<map id="LilyEngine::BaseGame::load_engine_resources" name="LilyEngine::BaseGame::load_engine_resources">
+<area shape="rect" id="node1" title="Loads internal engine resources, like a default font, etc." alt="" coords="208,5,371,47"/>
+<area shape="rect" id="node2" href="$classLilyEngine_1_1BaseGame.html#a741346520f579d78743a8b4d261b7b24" title="Construct a BaseGame object, with a given title, window size, and autorun flag. Initializes SDL and i..." alt="" coords="5,5,160,47"/>
+</map>

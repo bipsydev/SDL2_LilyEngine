@@ -88,7 +88,7 @@ $(document).ready(function(){initNavTree('main_8cpp.html',''); initResizable(); 
 </div><!--header-->
 <div class="contents">
 
-<p>Main function to show how to run an example game created with LilyEngine::BaseGame.  
+<p>Main function to show how to run an example game created with <a class="el" href="classLilyEngine_1_1BaseGame.html" title="Abstract base class for all games made with SDL_LilyEngine. Inherit for your own game,...">LilyEngine::BaseGame</a>.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="ExampleGame_8hpp_source.html">ExampleGame.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -96,13 +96,21 @@ Include dependency graph for main.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#asrc_2main_8cpp" alt=""/></div>
 <map name="asrc_2main_8cpp" id="asrc_2main_8cpp">
-<area shape="rect" title="Main function to show how to run an example game created with LilyEngine::BaseGame." alt="" coords="90,5,187,32"/>
-<area shape="rect" href="ExampleGame_8hpp.html" title="Example template game for the game engine." alt="" coords="72,80,205,107"/>
-<area shape="rect" href="SDL2__LilyEngine_8hpp.html" title="Shortcut header file to include all SDL2_LilyEngine files." alt="" coords="65,155,212,181"/>
-<area shape="rect" href="BaseGame_8hpp.html" title="Main abstract class to inherit for all games made with SDL_LilyEngine." alt="" coords="83,229,195,256"/>
-<area shape="rect" title=" " alt="" coords="5,304,64,331"/>
-<area shape="rect" title=" " alt="" coords="89,304,189,331"/>
-<area shape="rect" title=" " alt="" coords="213,304,289,331"/>
+<area shape="rect" title="Main function to show how to run an example game created with LilyEngine::BaseGame." alt="" coords="299,5,397,32"/>
+<area shape="rect" href="ExampleGame_8hpp.html" title="Example template game for the game engine." alt="" coords="281,80,415,107"/>
+<area shape="rect" href="SDL2__LilyEngine_8hpp.html" title="Shortcut header file to include all SDL2_LilyEngine library components." alt="" coords="275,155,421,181"/>
+<area shape="rect" href="BaseGame_8hpp.html" title="Main abstract class to inherit for all games made with SDL_LilyEngine." alt="" coords="339,229,451,256"/>
+<area shape="rect" href="Clock_8hpp.html" title=" " alt="" coords="604,304,684,331"/>
+<area shape="rect" href="LTextBox_8hpp.html" title=" " alt="" coords="250,304,353,331"/>
+<area shape="rect" href="SDLError_8hpp.html" title=" " alt="" coords="74,304,174,331"/>
+<area shape="rect" title=" " alt="" coords="383,379,441,405"/>
+<area shape="rect" title=" " alt="" coords="174,379,250,405"/>
+<area shape="rect" title=" " alt="" coords="274,379,329,405"/>
+<area shape="rect" title=" " alt="" coords="479,304,579,331"/>
+<area shape="rect" title=" " alt="" coords="659,379,722,405"/>
+<area shape="rect" title=" " alt="" coords="560,379,635,405"/>
+<area shape="rect" title=" " alt="" coords="5,379,77,405"/>
+<area shape="rect" title=" " alt="" coords="102,379,149,405"/>
 </map>
 </div>
 </div>
@@ -115,7 +123,7 @@ Functions</h2></td></tr>
 <tr class="separator:a76d7886ff34652714e4a2d447ae4c5b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Main function to show how to run an example game created with LilyEngine::BaseGame. </p>
+<div class="textblock"><p>Main function to show how to run an example game created with <a class="el" href="classLilyEngine_1_1BaseGame.html" title="Abstract base class for all games made with SDL_LilyEngine. Inherit for your own game,...">LilyEngine::BaseGame</a>. </p>
 <dl class="section author"><dt>Author</dt><dd>lilitharcana (<a href="#" onclick="location.href='mai'+'lto:'+'lil'+'it'+'hal'+'ic'+'ecr'+'aw'+'for'+'d@'+'gma'+'il'+'.co'+'m'; return false;">lilit<span style="display: none;">.nosp@m.</span>hali<span style="display: none;">.nosp@m.</span>cecra<span style="display: none;">.nosp@m.</span>wfor<span style="display: none;">.nosp@m.</span>d@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a>)</dd></dl>
 <p>follow this guide to set up VS Code with SDL2: <a href="https://giovanni.codes/setup-sdl2-with-visual-studio-code-and-mingw64-on-windows/">https://giovanni.codes/setup-sdl2-with-visual-studio-code-and-mingw64-on-windows/</a> If you want SDL2_ttf, SDL2_image, etc, you must download the MinGW development libraries &amp; also the x64/x86 runtime binaries to do the same: 1.) in tasks.json, under "tasks"/"args", add the /include/SDL2 folder with -I: "-IC:/Users/lilit/Dev/Libraries/SDL2-mingw/SDL2-2.0.14/x86_64/include/SDL2" 2.) also under "tasks"/"args", add the /lib folder with -L: "-LC:/Users/lilit/Dev/Libraries/SDL2-mingw/SDL2-2.0.14/x86_64/lib", 3.) again under "args", add the .lib files to the linker with -l: "-lSDL2main", "-lSDL2", "-lSDL2_ttf", "-lSDL2_image", etc... 4.) in c_cpp_properties.json, under "configurations"/"includePath", add your \include\SDL2 folders to update IntelliSense: "C:\\Users\\lilit\\Dev\\Libraries\\SDL2-mingw\\SDL2-2.0.14\\x86_64\\include\\SDL2" 5.) in your build folder, copy all the runtime .dll binaries: SDL2.dll, SDL2_ttf.dll, zlib1.dll, libfreetype-6.dll, SDL2_image.dll, libpng16-16.dll, libjpeg-9.dll, libtiff-5.dll, libwebp-7.dll, etc...</p>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
@@ -169,17 +177,16 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
 <div class="ttc" id="aclassExampleGame_html"><div class="ttname"><a href="classExampleGame.html">ExampleGame</a></div><div class="ttdef"><b>Definition:</b> <a href="ExampleGame_8hpp_source.html#l00017">ExampleGame.hpp:18</a></div></div>
-<div class="ttc" id="aclassExampleGame_html_a49a0d9e6dc57dc9da4431cc60a508785"><div class="ttname"><a href="classExampleGame.html#a49a0d9e6dc57dc9da4431cc60a508785">ExampleGame::run</a></div><div class="ttdeci">void run() override</div><div class="ttdoc">Calls BaseGame::run().</div><div class="ttdef"><b>Definition:</b> <a href="ExampleGame_8cpp_source.html#l00026">ExampleGame.cpp:26</a></div></div>
+<div class="ttc" id="aclassExampleGame_html_a49a0d9e6dc57dc9da4431cc60a508785"><div class="ttname"><a href="classExampleGame.html#a49a0d9e6dc57dc9da4431cc60a508785">ExampleGame::run</a></div><div class="ttdeci">void run() override</div><div class="ttdoc">The main game loop. Updates clock, checks for events, updates game logic, and renders the screen....</div><div class="ttdef"><b>Definition:</b> <a href="ExampleGame_8cpp_source.html#l00023">ExampleGame.cpp:23</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ExampleGame_8cpp_source.html#l00026">ExampleGame::run()</a>.</p>
+<p class="reference">References <a class="el" href="ExampleGame_8cpp_source.html#l00023">ExampleGame::run()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp_a76d7886ff34652714e4a2d447ae4c5b6_cgraph.png" border="0" usemap="#amain_8cpp_a76d7886ff34652714e4a2d447ae4c5b6_cgraph" alt=""/></div>
 <map name="amain_8cpp_a76d7886ff34652714e4a2d447ae4c5b6_cgraph" id="amain_8cpp_a76d7886ff34652714e4a2d447ae4c5b6_cgraph">
 <area shape="rect" title="Main function, creates a game object, runs it, and then deletes it." alt="" coords="5,5,56,32"/>
-<area shape="rect" href="classExampleGame.html#a49a0d9e6dc57dc9da4431cc60a508785" title="Calls BaseGame::run()." alt="" coords="104,5,239,32"/>
-<area shape="rect" href="classBaseGame.html#a8cca19edcb875b30e47cca2a255b0916" title="The main game loop. Updates clock, checks for events, updates game logic, and renders the screen...." alt="" coords="287,5,400,32"/>
+<area shape="rect" href="classExampleGame.html#a49a0d9e6dc57dc9da4431cc60a508785" title="The main game loop. Updates clock, checks for events, updates game logic, and renders the screen...." alt="" coords="104,5,239,32"/>
 </map>
 </div>
 
@@ -191,7 +198,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="main_8cpp.html">main.cpp</a></li>
-    <li class="footer">Generated on Tue Jul 13 2021 18:55:48 for SDL2_LilyEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Sun Jul 18 2021 18:28:08 for SDL2_LilyEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

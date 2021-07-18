@@ -1,0 +1,8 @@
+<map id="error" name="error">
+<area shape="rect" id="node1" title="report an error to the console, with relevant SDL module error, and pause the console to read." alt="" coords="437,71,485,97"/>
+<area shape="rect" id="node2" href="$classLilyEngine_1_1BaseGame.html#a741346520f579d78743a8b4d261b7b24" title="Construct a BaseGame object, with a given title, window size, and autorun flag. Initializes SDL and i..." alt="" coords="5,34,160,75"/>
+<area shape="rect" id="node3" href="$classLilyEngine_1_1LTextBox.html#a027ec9b30309bf59fb6ed08337e9c661" title="Creates the SDL_Surface from the saved font, text, and color." alt="" coords="226,151,371,193"/>
+<area shape="rect" id="node5" href="$classLilyEngine_1_1BaseGame.html#a999a73da3da32502e91ea0e822b03a9b" title="Loads internal engine resources, like a default font, etc." alt="" coords="217,34,380,75"/>
+<area shape="rect" id="node6" href="$classLilyEngine_1_1BaseGame.html#a32ac96c8284fa2d0fe8f6457d2e2ae0b" title="The main game loop. Updates clock, checks for events, updates game logic, and renders the screen...." alt="" coords="208,100,389,127"/>
+<area shape="rect" id="node4" href="$classLilyEngine_1_1LTextBox.html#a67a941705114b2df14e82399e39fc229" title=" " alt="" coords="10,151,155,193"/>
+</map>

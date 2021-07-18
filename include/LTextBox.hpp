@@ -13,10 +13,9 @@
 
 namespace LilyEngine
 {
-
-	/*
-	* Creates a Text box message out of an LFont, holds message texture, rect, and parent font.
-	*/
+	/**
+	 * @brief Creates a Text box message out of a TTF_Font, holds message texture & surface, rect, color, and parent font.
+	 */
 	class LTextBox
 	{
 	private:
@@ -50,6 +49,7 @@ namespace LilyEngine
 		SDL_Rect getRect();
 
 		void setPosition(SDL_Point newPos);
+		void setPosition(int x, int y);
 		SDL_Point getPosition();
 
 		void setFont(TTF_Font* newFont);

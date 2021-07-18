@@ -1,4 +1,8 @@
 <map id="ExampleGame" name="ExampleGame">
-<area shape="rect" id="node1" title=" " alt="" coords="5,204,141,311"/>
-<area shape="rect" id="node2" href="$classBaseGame.html" title=" " alt="" coords="16,5,131,156"/>
+<area shape="rect" id="node1" title=" " alt="" coords="113,940,249,1120"/>
+<area shape="rect" id="node2" href="$classLilyEngine_1_1BaseGame.html" title="Abstract base class for all games made with SDL_LilyEngine. Inherit for your own game,..." alt="" coords="5,463,176,863"/>
+<area shape="rect" id="node3" href="$structLilyEngine_1_1Clock.html" title="Clock struct to keep track of game time, delta time, ticks, framerate, vsync, etc." alt="" coords="15,147,167,385"/>
+<area shape="rect" id="node4" href="$classLilyEngine_1_1LTextBox.html" title="Creates a Text box message out of a TTF_Font, holds message texture &amp; surface, rect,..." alt="" coords="201,448,346,877"/>
+<area shape="rect" id="node5" title=" " alt="" coords="233,227,313,305"/>
+<area shape="rect" id="node6" title=" " alt="" coords="210,5,337,97"/>
 </map>

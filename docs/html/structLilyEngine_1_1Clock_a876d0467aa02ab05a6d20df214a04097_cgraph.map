@@ -1,0 +1,7 @@
+<map id="LilyEngine::Clock::tick" name="LilyEngine::Clock::tick">
+<area shape="rect" id="node1" title="This will update game time variables based on SDL_GetTicks(), then delay based on desired FPS...." alt="" coords="5,111,157,138"/>
+<area shape="rect" id="node2" href="$structLilyEngine_1_1Clock.html#abef5d17f0e4ac71339712b13c39d73aa" title="Calculate the delta time from last tick using new (current) tick time, last tick time,..." alt="" coords="208,5,339,47"/>
+<area shape="rect" id="node3" href="$structLilyEngine_1_1Clock.html#a1cc6fac4318bbbf5ff4c1214473b9180" title="Halt program execution according to desired target FPS." alt="" coords="208,71,339,112"/>
+<area shape="rect" id="node4" href="$structLilyEngine_1_1Clock.html#a49a295c2963bc69fce4f7961916b404c" title="get the time from SDL using system&#45;specific high&#45;resolution timer." alt="" coords="205,136,341,177"/>
+<area shape="rect" id="node5" href="$structLilyEngine_1_1Clock.html#a6ce0ce8d5dbdfabc72a8c93417f5bc39" title="Update seconds, minutes, and hours after delta has been calculated." alt="" coords="208,201,339,243"/>
+</map>

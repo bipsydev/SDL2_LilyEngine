@@ -1,0 +1,16 @@
+<map id="LilyEngine::BaseGame::run" name="LilyEngine::BaseGame::run">
+<area shape="rect" id="node1" title="The main game loop. Updates clock, checks for events, updates game logic, and renders the screen...." alt="" coords="5,261,187,287"/>
+<area shape="rect" id="node2" href="$classLilyEngine_1_1BaseGame.html#ab6ccbadb2d4c437477bb279f31b91dbb" title="Events that the game engine needs to handle." alt="" coords="235,5,389,47"/>
+<area shape="rect" id="node3" href="$classLilyEngine_1_1BaseGame.html#a90a76dbed380859a7dd48184d682c064" title=" " alt="" coords="235,71,389,112"/>
+<area shape="rect" id="node4" href="$classLilyEngine_1_1BaseGame.html#ad82237788b844c785f6c6d15d1b13389" title="Updates engine logic." alt="" coords="235,136,389,177"/>
+<area shape="rect" id="node5" href="$SDLError_8hpp.html#a6cf67483ac778554c32cae3970d6c5e6" title="report an error to the console, with relevant SDL module error, and pause the console to read." alt="" coords="288,202,336,229"/>
+<area shape="rect" id="node6" href="$classLilyEngine_1_1BaseGame.html#a46ccd3bc2ab4c623f96d104896aa1bf6" title=" " alt="" coords="235,253,389,295"/>
+<area shape="rect" id="node7" href="$classLilyEngine_1_1BaseGame.html#adda9f90594a728618676db0adfa23e4d" title=" " alt="" coords="235,319,389,360"/>
+<area shape="rect" id="node8" href="$classLilyEngine_1_1BaseGame.html#ae17d925cb0c328a396f20082cda4a7fe" title=" " alt="" coords="235,384,389,425"/>
+<area shape="rect" id="node9" href="$structLilyEngine_1_1Clock.html#a9e4494a4231d9f982254420c0606a250" title="This will update game time variables based on SDL_GetTicks(), then delay based on desired FPS...." alt="" coords="236,450,388,477"/>
+<area shape="rect" id="node14" href="$classLilyEngine_1_1BaseGame.html#a94b33f1769db524328b790932aed9486" title=" " alt="" coords="235,501,389,543"/>
+<area shape="rect" id="node10" href="$structLilyEngine_1_1Clock.html#abef5d17f0e4ac71339712b13c39d73aa" title="Calculate the delta time from last tick using new (current) tick time, last tick time,..." alt="" coords="440,344,571,385"/>
+<area shape="rect" id="node11" href="$structLilyEngine_1_1Clock.html#a1cc6fac4318bbbf5ff4c1214473b9180" title="Halt program execution according to desired target FPS." alt="" coords="440,409,571,451"/>
+<area shape="rect" id="node12" href="$structLilyEngine_1_1Clock.html#a49a295c2963bc69fce4f7961916b404c" title="Get the time from SDL using system&#45;specific high&#45;resolution timer." alt="" coords="437,475,573,516"/>
+<area shape="rect" id="node13" href="$structLilyEngine_1_1Clock.html#a6ce0ce8d5dbdfabc72a8c93417f5bc39" title="Update seconds, minutes, and hours after delta has been calculated." alt="" coords="440,540,571,581"/>
+</map>

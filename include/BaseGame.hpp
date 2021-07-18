@@ -25,8 +25,15 @@
 #include <string>
 
 
+/**
+ * @brief Namespace for all engine components.
+ */
 namespace LilyEngine {
 
+	/**
+	 * @brief Abstract base class for all games made with SDL_LilyEngine.
+	 * Inherit for your own game, and implement the virtual functions.
+	 */
 	class BaseGame
 	{
 	public:

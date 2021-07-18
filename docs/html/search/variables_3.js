@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['window_39',['window',['../classBaseGame.html#a9d7294b351a00cf0b2f0316ef5f456c2',1,'BaseGame']]]
+  ['errorstring_159',['errorString',['../SDLError_8hpp.html#a0bbdebd7a72cef7c0b0641a3607d3fcf',1,'SDLError.hpp']]]
 ];

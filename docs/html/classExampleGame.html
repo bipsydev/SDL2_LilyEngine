@@ -83,6 +83,7 @@ $(document).ready(function(){initNavTree('classExampleGame.html',''); initResiza
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classExampleGame-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ExampleGame Class Reference</div>  </div>
@@ -95,8 +96,8 @@ Inheritance diagram for ExampleGame:</div>
 <div class="dyncontent">
 <div class="center"><img src="classExampleGame__inherit__graph.png" border="0" usemap="#aExampleGame_inherit__map" alt="Inheritance graph"/></div>
 <map name="aExampleGame_inherit__map" id="aExampleGame_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,204,141,311"/>
-<area shape="rect" href="classBaseGame.html" title=" " alt="" coords="16,5,131,156"/>
+<area shape="rect" title=" " alt="" coords="23,468,159,648"/>
+<area shape="rect" href="classLilyEngine_1_1BaseGame.html" title="Abstract base class for all games made with SDL_LilyEngine. Inherit for your own game,..." alt="" coords="5,5,176,420"/>
 </map>
 </div>
 <div class="dynheader">
@@ -104,36 +105,70 @@ Collaboration diagram for ExampleGame:</div>
 <div class="dyncontent">
 <div class="center"><img src="classExampleGame__coll__graph.png" border="0" usemap="#aExampleGame_coll__map" alt="Collaboration graph"/></div>
 <map name="aExampleGame_coll__map" id="aExampleGame_coll__map">
-<area shape="rect" title=" " alt="" coords="5,204,141,311"/>
-<area shape="rect" href="classBaseGame.html" title=" " alt="" coords="16,5,131,156"/>
+<area shape="rect" title=" " alt="" coords="113,940,249,1120"/>
+<area shape="rect" href="classLilyEngine_1_1BaseGame.html" title="Abstract base class for all games made with SDL_LilyEngine. Inherit for your own game,..." alt="" coords="5,463,176,863"/>
+<area shape="rect" href="structLilyEngine_1_1Clock.html" title="Clock struct to keep track of game time, delta time, ticks, framerate, vsync, etc." alt="" coords="15,147,167,385"/>
+<area shape="rect" href="classLilyEngine_1_1LTextBox.html" title="Creates a Text box message out of a TTF_Font, holds message texture &amp; surface, rect,..." alt="" coords="201,448,346,877"/>
+<area shape="rect" title=" " alt="" coords="233,227,313,305"/>
+<area shape="rect" title=" " alt="" coords="210,5,337,97"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a38f26de67f2485cd03b5e48b6b98609f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExampleGame.html#a38f26de67f2485cd03b5e48b6b98609f">ExampleGame</a> ()</td></tr>
-<tr class="memdesc:a38f26de67f2485cd03b5e48b6b98609f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Example Game object Sets window title, size, and autorun.  <a href="classExampleGame.html#a38f26de67f2485cd03b5e48b6b98609f">More...</a><br /></td></tr>
-<tr class="separator:a38f26de67f2485cd03b5e48b6b98609f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bbe587c375c7458b977e876f2d82d79"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExampleGame.html#a5bbe587c375c7458b977e876f2d82d79">ExampleGame</a> (std::string title=&quot;This is an Example Game!&quot;)</td></tr>
+<tr class="memdesc:a5bbe587c375c7458b977e876f2d82d79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Example Game object Sets window title, size, and autorun.  <a href="classExampleGame.html#a5bbe587c375c7458b977e876f2d82d79">More...</a><br /></td></tr>
+<tr class="separator:a5bbe587c375c7458b977e876f2d82d79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaae94a06bd591b35cf083552f3fd0961"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExampleGame.html#aaae94a06bd591b35cf083552f3fd0961">~ExampleGame</a> ()</td></tr>
 <tr class="memdesc:aaae94a06bd591b35cf083552f3fd0961"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees up <a class="el" href="classExampleGame.html">ExampleGame</a> resources from memory.  <a href="classExampleGame.html#aaae94a06bd591b35cf083552f3fd0961">More...</a><br /></td></tr>
 <tr class="separator:aaae94a06bd591b35cf083552f3fd0961"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49a0d9e6dc57dc9da4431cc60a508785"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExampleGame.html#a49a0d9e6dc57dc9da4431cc60a508785">run</a> () override</td></tr>
-<tr class="memdesc:a49a0d9e6dc57dc9da4431cc60a508785"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls <a class="el" href="classBaseGame.html#a8cca19edcb875b30e47cca2a255b0916" title="The main game loop. Updates clock, checks for events, updates game logic, and renders the screen....">BaseGame::run()</a>.  <a href="classExampleGame.html#a49a0d9e6dc57dc9da4431cc60a508785">More...</a><br /></td></tr>
+<tr class="memdesc:a49a0d9e6dc57dc9da4431cc60a508785"><td class="mdescLeft">&#160;</td><td class="mdescRight">The main game loop. Updates clock, checks for events, updates game logic, and renders the screen. Exits if isRunning is false.  <a href="classExampleGame.html#a49a0d9e6dc57dc9da4431cc60a508785">More...</a><br /></td></tr>
 <tr class="separator:a49a0d9e6dc57dc9da4431cc60a508785"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classBaseGame"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classBaseGame')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classBaseGame.html">BaseGame</a></td></tr>
-<tr class="memitem:a903869deac2898ced5bead697f2973d8 inherit pub_methods_classBaseGame"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseGame.html#a903869deac2898ced5bead697f2973d8">BaseGame</a> (const char *title=&quot;ExampleGame&quot;, int width=640, int height=480, bool run_instantly=false)</td></tr>
-<tr class="memdesc:a903869deac2898ced5bead697f2973d8 inherit pub_methods_classBaseGame"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classBaseGame.html">BaseGame</a> object, with a given title, window size, and autorun flag. Initializes SDL and its subsystems, creates SDL window and renderer, and sets up LilyEngine systems. If autorun is true, the game will automatically start and run inside the constructor. If you need an exit code for the game, call <a class="el" href="classBaseGame.html#a8cca19edcb875b30e47cca2a255b0916" title="The main game loop. Updates clock, checks for events, updates game logic, and renders the screen....">run()</a> seperately.  <a href="classBaseGame.html#a903869deac2898ced5bead697f2973d8">More...</a><br /></td></tr>
-<tr class="separator:a903869deac2898ced5bead697f2973d8 inherit pub_methods_classBaseGame"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18240692c5beab2d87b26513bb94b76a inherit pub_methods_classBaseGame"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseGame.html#a18240692c5beab2d87b26513bb94b76a">~BaseGame</a> ()=0</td></tr>
-<tr class="memdesc:a18240692c5beab2d87b26513bb94b76a inherit pub_methods_classBaseGame"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees your resources with cleanup(), destroys LilyEngine and SDL systems.  <a href="classBaseGame.html#a18240692c5beab2d87b26513bb94b76a">More...</a><br /></td></tr>
-<tr class="separator:a18240692c5beab2d87b26513bb94b76a inherit pub_methods_classBaseGame"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0690743fddef127a10830accdf016768"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExampleGame.html#a0690743fddef127a10830accdf016768">init</a> () override</td></tr>
+<tr class="separator:a0690743fddef127a10830accdf016768"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b6c9c1fa7011db248f49bf1c1e938a0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExampleGame.html#a7b6c9c1fa7011db248f49bf1c1e938a0">event</a> (SDL_Event &amp;event) override</td></tr>
+<tr class="separator:a7b6c9c1fa7011db248f49bf1c1e938a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f130555e8f269d34ff5cd407e99fc9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExampleGame.html#a9f130555e8f269d34ff5cd407e99fc9f">update</a> () override</td></tr>
+<tr class="separator:a9f130555e8f269d34ff5cd407e99fc9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae58accf4e694fcb386d41d2b99a78d1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExampleGame.html#ae58accf4e694fcb386d41d2b99a78d1a">render</a> () override</td></tr>
+<tr class="separator:ae58accf4e694fcb386d41d2b99a78d1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dc5fa547cb062fe9cc5e839bed7a8f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExampleGame.html#a2dc5fa547cb062fe9cc5e839bed7a8f0">cleanup</a> () override</td></tr>
+<tr class="separator:a2dc5fa547cb062fe9cc5e839bed7a8f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classLilyEngine_1_1BaseGame"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classLilyEngine_1_1BaseGame')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classLilyEngine_1_1BaseGame.html">LilyEngine::BaseGame</a></td></tr>
+<tr class="memitem:a741346520f579d78743a8b4d261b7b24 inherit pub_methods_classLilyEngine_1_1BaseGame"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLilyEngine_1_1BaseGame.html#a741346520f579d78743a8b4d261b7b24">BaseGame</a> (const char *title, int width=640, int height=480, bool run_instantly=false)</td></tr>
+<tr class="memdesc:a741346520f579d78743a8b4d261b7b24 inherit pub_methods_classLilyEngine_1_1BaseGame"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classLilyEngine_1_1BaseGame.html" title="Abstract base class for all games made with SDL_LilyEngine. Inherit for your own game,...">BaseGame</a> object, with a given title, window size, and autorun flag. Initializes SDL and its subsystems, creates SDL window and renderer, and sets up <a class="el" href="namespaceLilyEngine.html" title="Namespace for all engine components.">LilyEngine</a> systems. If autorun is true, the game will automatically start and run inside the constructor. If you need an exit code for the game, call <a class="el" href="classLilyEngine_1_1BaseGame.html#a32ac96c8284fa2d0fe8f6457d2e2ae0b" title="The main game loop. Updates clock, checks for events, updates game logic, and renders the screen....">run()</a> seperately.  <a href="classLilyEngine_1_1BaseGame.html#a741346520f579d78743a8b4d261b7b24">More...</a><br /></td></tr>
+<tr class="separator:a741346520f579d78743a8b4d261b7b24 inherit pub_methods_classLilyEngine_1_1BaseGame"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67471b4d860fde0c7d78241ca1b3fb3d inherit pub_methods_classLilyEngine_1_1BaseGame"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLilyEngine_1_1BaseGame.html#a67471b4d860fde0c7d78241ca1b3fb3d">~BaseGame</a> ()=0</td></tr>
+<tr class="memdesc:a67471b4d860fde0c7d78241ca1b3fb3d inherit pub_methods_classLilyEngine_1_1BaseGame"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees your resources with <a class="el" href="classLilyEngine_1_1BaseGame.html#a6c4b73645fb4e9900ee5f0d65b2d148e">cleanup()</a>, destroys <a class="el" href="namespaceLilyEngine.html" title="Namespace for all engine components.">LilyEngine</a> and SDL systems.  <a href="classLilyEngine_1_1BaseGame.html#a67471b4d860fde0c7d78241ca1b3fb3d">More...</a><br /></td></tr>
+<tr class="separator:a67471b4d860fde0c7d78241ca1b3fb3d inherit pub_methods_classLilyEngine_1_1BaseGame"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03cfb862f48ad7889c4bf86126cfd9c5 inherit pub_methods_classLilyEngine_1_1BaseGame"><td class="memItemLeft" align="right" valign="top">SDL_Point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLilyEngine_1_1BaseGame.html#a03cfb862f48ad7889c4bf86126cfd9c5">getWindowSize</a> ()</td></tr>
+<tr class="separator:a03cfb862f48ad7889c4bf86126cfd9c5 inherit pub_methods_classLilyEngine_1_1BaseGame"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:abedbc978c7f94a36f1c879214b9eff67"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLilyEngine_1_1LTextBox.html">LilyEngine::LTextBox</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExampleGame.html#abedbc978c7f94a36f1c879214b9eff67">textbox</a></td></tr>
+<tr class="separator:abedbc978c7f94a36f1c879214b9eff67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_static_methods_classLilyEngine_1_1BaseGame"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classLilyEngine_1_1BaseGame')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classLilyEngine_1_1BaseGame.html">LilyEngine::BaseGame</a></td></tr>
+<tr class="memitem:afa0da97235f3d06045c118a724ca07fb inherit pub_static_methods_classLilyEngine_1_1BaseGame"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classLilyEngine_1_1BaseGame.html">BaseGame</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLilyEngine_1_1BaseGame.html#afa0da97235f3d06045c118a724ca07fb">getGame</a> ()</td></tr>
+<tr class="separator:afa0da97235f3d06045c118a724ca07fb inherit pub_static_methods_classLilyEngine_1_1BaseGame"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classLilyEngine_1_1BaseGame"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classLilyEngine_1_1BaseGame')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classLilyEngine_1_1BaseGame.html">LilyEngine::BaseGame</a></td></tr>
+<tr class="memitem:a751199e60662c81b8a47ed379243e14e inherit pro_methods_classLilyEngine_1_1BaseGame"><td class="memItemLeft" align="right" valign="top">SDL_Window *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLilyEngine_1_1BaseGame.html#a751199e60662c81b8a47ed379243e14e">getWindow</a> ()</td></tr>
+<tr class="separator:a751199e60662c81b8a47ed379243e14e inherit pro_methods_classLilyEngine_1_1BaseGame"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd33984f72847a1eee9f1083f8e34091 inherit pro_methods_classLilyEngine_1_1BaseGame"><td class="memItemLeft" align="right" valign="top">SDL_Renderer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLilyEngine_1_1BaseGame.html#abd33984f72847a1eee9f1083f8e34091">getRenderer</a> ()</td></tr>
+<tr class="separator:abd33984f72847a1eee9f1083f8e34091 inherit pro_methods_classLilyEngine_1_1BaseGame"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1fec4c3473756129d3cd70b7a3d4532 inherit pro_methods_classLilyEngine_1_1BaseGame"><td class="memItemLeft" align="right" valign="top">TTF_Font *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLilyEngine_1_1BaseGame.html#af1fec4c3473756129d3cd70b7a3d4532">getFont</a> ()</td></tr>
+<tr class="separator:af1fec4c3473756129d3cd70b7a3d4532 inherit pro_methods_classLilyEngine_1_1BaseGame"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="ExampleGame_8hpp_source.html#l00017">17</a> of file <a class="el" href="ExampleGame_8hpp_source.html">ExampleGame.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a38f26de67f2485cd03b5e48b6b98609f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38f26de67f2485cd03b5e48b6b98609f">&#9670;&nbsp;</a></span>ExampleGame()</h2>
+<a id="a5bbe587c375c7458b977e876f2d82d79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bbe587c375c7458b977e876f2d82d79">&#9670;&nbsp;</a></span>ExampleGame()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -141,7 +176,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">ExampleGame::ExampleGame </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>title</em> = <code>&quot;This&#160;is&#160;an&#160;Example&#160;Game!&quot;</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -150,10 +186,10 @@ Public Member Functions</h2></td></tr>
 <p>Construct a new Example Game object Sets window title, size, and autorun. </p>
 
 <p class="definition">Definition at line <a class="el" href="ExampleGame_8cpp_source.html#l00018">18</a> of file <a class="el" href="ExampleGame_8cpp_source.html">ExampleGame.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;: <a class="code" href="classBaseGame.html#a903869deac2898ced5bead697f2973d8">BaseGame</a>(<span class="stringliteral">&quot;This is an Example Game!&quot;</span>, 640, 480, <span class="keyword">false</span>)</div>
+<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;: <a class="code" href="classLilyEngine_1_1BaseGame.html#a741346520f579d78743a8b4d261b7b24">BaseGame</a>(title.c_str(), 640, 480, <span class="keyword">false</span>)</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
-<div class="ttc" id="aclassBaseGame_html_a903869deac2898ced5bead697f2973d8"><div class="ttname"><a href="classBaseGame.html#a903869deac2898ced5bead697f2973d8">BaseGame::BaseGame</a></div><div class="ttdeci">BaseGame(const char *title=&quot;ExampleGame&quot;, int width=640, int height=480, bool run_instantly=false)</div><div class="ttdoc">Construct a BaseGame object, with a given title, window size, and autorun flag. Initializes SDL and i...</div><div class="ttdef"><b>Definition:</b> <a href="BaseGame_8cpp_source.html#l00026">BaseGame.cpp:26</a></div></div>
+<div class="ttc" id="aclassLilyEngine_1_1BaseGame_html_a741346520f579d78743a8b4d261b7b24"><div class="ttname"><a href="classLilyEngine_1_1BaseGame.html#a741346520f579d78743a8b4d261b7b24">LilyEngine::BaseGame::BaseGame</a></div><div class="ttdeci">BaseGame(const char *title, int width=640, int height=480, bool run_instantly=false)</div><div class="ttdoc">Construct a BaseGame object, with a given title, window size, and autorun flag. Initializes SDL and i...</div><div class="ttdef"><b>Definition:</b> <a href="BaseGame_8cpp_source.html#l00032">BaseGame.cpp:32</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -174,9 +210,9 @@ Public Member Functions</h2></td></tr>
 
 <p>Frees up <a class="el" href="classExampleGame.html">ExampleGame</a> resources from memory. </p>
 
-<p class="definition">Definition at line <a class="el" href="ExampleGame_8cpp_source.html#l00034">34</a> of file <a class="el" href="ExampleGame_8cpp_source.html">ExampleGame.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ExampleGame_8cpp_source.html#l00061">61</a> of file <a class="el" href="ExampleGame_8cpp_source.html">ExampleGame.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -204,37 +240,247 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Calls <a class="el" href="classBaseGame.html#a8cca19edcb875b30e47cca2a255b0916" title="The main game loop. Updates clock, checks for events, updates game logic, and renders the screen....">BaseGame::run()</a>. </p>
+<p>The main game loop. Updates clock, checks for events, updates game logic, and renders the screen. Exits if isRunning is false. </p>
 
-<p>Reimplemented from <a class="el" href="classBaseGame.html#a8cca19edcb875b30e47cca2a255b0916">BaseGame</a>.</p>
+<p>Reimplemented from <a class="el" href="classLilyEngine_1_1BaseGame.html#a32ac96c8284fa2d0fe8f6457d2e2ae0b">LilyEngine::BaseGame</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ExampleGame_8cpp_source.html#l00026">26</a> of file <a class="el" href="ExampleGame_8cpp_source.html">ExampleGame.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classBaseGame.html#a8cca19edcb875b30e47cca2a255b0916">BaseGame::run</a>();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
-<div class="ttc" id="aclassBaseGame_html_a8cca19edcb875b30e47cca2a255b0916"><div class="ttname"><a href="classBaseGame.html#a8cca19edcb875b30e47cca2a255b0916">BaseGame::run</a></div><div class="ttdeci">virtual void run()</div><div class="ttdoc">The main game loop. Updates clock, checks for events, updates game logic, and renders the screen....</div><div class="ttdef"><b>Definition:</b> <a href="BaseGame_8cpp_source.html#l00070">BaseGame.cpp:70</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ExampleGame_8cpp_source.html#l00023">23</a> of file <a class="el" href="ExampleGame_8cpp_source.html">ExampleGame.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    BaseGame::run();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="BaseGame_8cpp_source.html#l00070">BaseGame::run()</a>.</p>
-
 <p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00033">main()</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classExampleGame_a49a0d9e6dc57dc9da4431cc60a508785_cgraph.png" border="0" usemap="#aclassExampleGame_a49a0d9e6dc57dc9da4431cc60a508785_cgraph" alt=""/></div>
-<map name="aclassExampleGame_a49a0d9e6dc57dc9da4431cc60a508785_cgraph" id="aclassExampleGame_a49a0d9e6dc57dc9da4431cc60a508785_cgraph">
-<area shape="rect" title="Calls BaseGame::run()." alt="" coords="5,5,140,32"/>
-<area shape="rect" href="classBaseGame.html#a8cca19edcb875b30e47cca2a255b0916" title="The main game loop. Updates clock, checks for events, updates game logic, and renders the screen...." alt="" coords="188,5,301,32"/>
-</map>
-</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classExampleGame_a49a0d9e6dc57dc9da4431cc60a508785_icgraph.png" border="0" usemap="#aclassExampleGame_a49a0d9e6dc57dc9da4431cc60a508785_icgraph" alt=""/></div>
 <map name="aclassExampleGame_a49a0d9e6dc57dc9da4431cc60a508785_icgraph" id="aclassExampleGame_a49a0d9e6dc57dc9da4431cc60a508785_icgraph">
-<area shape="rect" title="Calls BaseGame::run()." alt="" coords="104,5,239,32"/>
+<area shape="rect" title="The main game loop. Updates clock, checks for events, updates game logic, and renders the screen...." alt="" coords="104,5,239,32"/>
 <area shape="rect" href="main_8cpp.html#a76d7886ff34652714e4a2d447ae4c5b6" title="Main function, creates a game object, runs it, and then deletes it." alt="" coords="5,5,56,32"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a0690743fddef127a10830accdf016768"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0690743fddef127a10830accdf016768">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ExampleGame::init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classLilyEngine_1_1BaseGame.html#adda9f90594a728618676db0adfa23e4d">LilyEngine::BaseGame</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="ExampleGame_8cpp_source.html#l00030">30</a> of file <a class="el" href="ExampleGame_8cpp_source.html">ExampleGame.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">// Load a text box</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classExampleGame.html#abedbc978c7f94a36f1c879214b9eff67">textbox</a> = <span class="keyword">new</span> <a class="code" href="classLilyEngine_1_1LTextBox.html">LilyEngine::LTextBox</a>(<a class="code" href="classLilyEngine_1_1BaseGame.html#af1fec4c3473756129d3cd70b7a3d4532">getFont</a>(), <span class="stringliteral">&quot;Here is some default text!&quot;</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="ttc" id="aclassExampleGame_html_abedbc978c7f94a36f1c879214b9eff67"><div class="ttname"><a href="classExampleGame.html#abedbc978c7f94a36f1c879214b9eff67">ExampleGame::textbox</a></div><div class="ttdeci">LilyEngine::LTextBox * textbox</div><div class="ttdef"><b>Definition:</b> <a href="ExampleGame_8hpp_source.html#l00020">ExampleGame.hpp:20</a></div></div>
+<div class="ttc" id="aclassLilyEngine_1_1BaseGame_html_af1fec4c3473756129d3cd70b7a3d4532"><div class="ttname"><a href="classLilyEngine_1_1BaseGame.html#af1fec4c3473756129d3cd70b7a3d4532">LilyEngine::BaseGame::getFont</a></div><div class="ttdeci">TTF_Font * getFont()</div><div class="ttdef"><b>Definition:</b> <a href="BaseGame_8cpp_source.html#l00134">BaseGame.cpp:134</a></div></div>
+<div class="ttc" id="aclassLilyEngine_1_1LTextBox_html"><div class="ttname"><a href="classLilyEngine_1_1LTextBox.html">LilyEngine::LTextBox</a></div><div class="ttdoc">Creates a Text box message out of a TTF_Font, holds message texture &amp; surface, rect,...</div><div class="ttdef"><b>Definition:</b> <a href="LTextBox_8hpp_source.html#l00019">LTextBox.hpp:20</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="BaseGame_8cpp_source.html#l00134">LilyEngine::BaseGame::getFont()</a>, and <a class="el" href="ExampleGame_8hpp_source.html#l00020">textbox</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classExampleGame_a0690743fddef127a10830accdf016768_cgraph.png" border="0" usemap="#aclassExampleGame_a0690743fddef127a10830accdf016768_cgraph" alt=""/></div>
+<map name="aclassExampleGame_a0690743fddef127a10830accdf016768_cgraph" id="aclassExampleGame_a0690743fddef127a10830accdf016768_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,139,39"/>
+<area shape="rect" href="classLilyEngine_1_1BaseGame.html#af1fec4c3473756129d3cd70b7a3d4532" title=" " alt="" coords="187,5,341,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7b6c9c1fa7011db248f49bf1c1e938a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b6c9c1fa7011db248f49bf1c1e938a0">&#9670;&nbsp;</a></span>event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ExampleGame::event </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Event &amp;&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classLilyEngine_1_1BaseGame.html#a46ccd3bc2ab4c623f96d104896aa1bf6">LilyEngine::BaseGame</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="ExampleGame_8cpp_source.html#l00037">37</a> of file <a class="el" href="ExampleGame_8cpp_source.html">ExampleGame.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9f130555e8f269d34ff5cd407e99fc9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f130555e8f269d34ff5cd407e99fc9f">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ExampleGame::update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classLilyEngine_1_1BaseGame.html#a94b33f1769db524328b790932aed9486">LilyEngine::BaseGame</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="ExampleGame_8cpp_source.html#l00042">42</a> of file <a class="el" href="ExampleGame_8cpp_source.html">ExampleGame.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae58accf4e694fcb386d41d2b99a78d1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae58accf4e694fcb386d41d2b99a78d1a">&#9670;&nbsp;</a></span>render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ExampleGame::render </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classLilyEngine_1_1BaseGame.html#ae17d925cb0c328a396f20082cda4a7fe">LilyEngine::BaseGame</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="ExampleGame_8cpp_source.html#l00047">47</a> of file <a class="el" href="ExampleGame_8cpp_source.html">ExampleGame.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="classExampleGame.html#abedbc978c7f94a36f1c879214b9eff67">textbox</a>-&gt;<a class="code" href="classLilyEngine_1_1LTextBox.html#aa0b0a3efd89dbb6301322454078b4cda">render</a>(<a class="code" href="classLilyEngine_1_1BaseGame.html#abd33984f72847a1eee9f1083f8e34091">getRenderer</a>());</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="ttc" id="aclassLilyEngine_1_1BaseGame_html_abd33984f72847a1eee9f1083f8e34091"><div class="ttname"><a href="classLilyEngine_1_1BaseGame.html#abd33984f72847a1eee9f1083f8e34091">LilyEngine::BaseGame::getRenderer</a></div><div class="ttdeci">SDL_Renderer * getRenderer()</div><div class="ttdef"><b>Definition:</b> <a href="BaseGame_8cpp_source.html#l00129">BaseGame.cpp:129</a></div></div>
+<div class="ttc" id="aclassLilyEngine_1_1LTextBox_html_aa0b0a3efd89dbb6301322454078b4cda"><div class="ttname"><a href="classLilyEngine_1_1LTextBox.html#aa0b0a3efd89dbb6301322454078b4cda">LilyEngine::LTextBox::render</a></div><div class="ttdeci">bool render(SDL_Renderer *renderer)</div><div class="ttdef"><b>Definition:</b> <a href="LTextBox_8cpp_source.html#l00037">LTextBox.cpp:37</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="BaseGame_8cpp_source.html#l00129">LilyEngine::BaseGame::getRenderer()</a>, <a class="el" href="LTextBox_8cpp_source.html#l00037">LilyEngine::LTextBox::render()</a>, and <a class="el" href="ExampleGame_8hpp_source.html#l00020">textbox</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classExampleGame_ae58accf4e694fcb386d41d2b99a78d1a_cgraph.png" border="0" usemap="#aclassExampleGame_ae58accf4e694fcb386d41d2b99a78d1a_cgraph" alt=""/></div>
+<map name="aclassExampleGame_ae58accf4e694fcb386d41d2b99a78d1a_cgraph" id="aclassExampleGame_ae58accf4e694fcb386d41d2b99a78d1a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,46,157,73"/>
+<area shape="rect" href="classLilyEngine_1_1BaseGame.html#abd33984f72847a1eee9f1083f8e34091" title=" " alt="" coords="205,5,360,47"/>
+<area shape="rect" href="classLilyEngine_1_1LTextBox.html#aa0b0a3efd89dbb6301322454078b4cda" title=" " alt="" coords="210,71,355,112"/>
+<area shape="rect" href="classLilyEngine_1_1LTextBox.html#aa7b074335923d5bca084bf28b55d7f47" title=" " alt="" coords="408,71,553,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2dc5fa547cb062fe9cc5e839bed7a8f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dc5fa547cb062fe9cc5e839bed7a8f0">&#9670;&nbsp;</a></span>cleanup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ExampleGame::cleanup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classLilyEngine_1_1BaseGame.html#a6c4b73645fb4e9900ee5f0d65b2d148e">LilyEngine::BaseGame</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="ExampleGame_8cpp_source.html#l00052">52</a> of file <a class="el" href="ExampleGame_8cpp_source.html">ExampleGame.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">// free resources</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">delete</span> <a class="code" href="classExampleGame.html#abedbc978c7f94a36f1c879214b9eff67">textbox</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ExampleGame_8hpp_source.html#l00020">textbox</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="abedbc978c7f94a36f1c879214b9eff67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abedbc978c7f94a36f1c879214b9eff67">&#9670;&nbsp;</a></span>textbox</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classLilyEngine_1_1LTextBox.html">LilyEngine::LTextBox</a>* ExampleGame::textbox</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ExampleGame_8hpp_source.html#l00020">20</a> of file <a class="el" href="ExampleGame_8hpp_source.html">ExampleGame.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ExampleGame_8cpp_source.html#l00052">cleanup()</a>, <a class="el" href="ExampleGame_8cpp_source.html#l00030">init()</a>, and <a class="el" href="ExampleGame_8cpp_source.html#l00047">render()</a>.</p>
 
 </div>
 </div>
@@ -248,7 +494,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classExampleGame.html">ExampleGame</a></li>
-    <li class="footer">Generated on Tue Jul 13 2021 18:55:48 for SDL2_LilyEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Sun Jul 18 2021 18:28:08 for SDL2_LilyEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

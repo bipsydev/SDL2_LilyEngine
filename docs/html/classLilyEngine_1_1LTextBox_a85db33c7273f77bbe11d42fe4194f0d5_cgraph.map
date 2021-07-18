@@ -1,0 +1,4 @@
+<map id="LilyEngine::LTextBox::setPosition" name="LilyEngine::LTextBox::setPosition">
+<area shape="rect" id="node1" title="Sets the position of the text box rect." alt="" coords="5,5,151,47"/>
+<area shape="rect" id="node2" href="$classLilyEngine_1_1LTextBox.html#a3578847fd7236e698e45f0fdd94bbcd3" title="Shortcut for setSize(width, height)." alt="" coords="199,5,344,47"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="ExampleGame::render" name="ExampleGame::render">
+<area shape="rect" id="node1" title=" " alt="" coords="5,46,157,73"/>
+<area shape="rect" id="node2" href="$classLilyEngine_1_1BaseGame.html#abd33984f72847a1eee9f1083f8e34091" title=" " alt="" coords="205,5,360,47"/>
+<area shape="rect" id="node3" href="$classLilyEngine_1_1LTextBox.html#aa0b0a3efd89dbb6301322454078b4cda" title=" " alt="" coords="210,71,355,112"/>
+<area shape="rect" id="node4" href="$classLilyEngine_1_1LTextBox.html#aa7b074335923d5bca084bf28b55d7f47" title=" " alt="" coords="408,71,553,112"/>
+</map>

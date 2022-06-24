@@ -1,5 +1,5 @@
-# `SDL2_LilyEngine` by _lilitharcana_
-###### *Check the* [docs!](https://lilitharcana.github.io/SDL2_LilyEngine)
+# `SDL2_LilyEngine` by _x86witch_
+###### *Check the* [docs!](https://x86witch.github.io/SDL2_LilyEngine)
 > *I'm learning SDL2 and C++ by making a game engine!*
 
 __`SDL2_LilyEngine`__ aims to be an educational high-level OOP wrapper framework for the SDL2 graphics library in C++!  
